@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useRef } from "react";
 
 type DropDownMenuProps = {
   title: string;
@@ -10,10 +10,24 @@ type DropDownMenuProps = {
 
 export default function DropDownMenu({ title, children }: DropDownMenuProps) {
   const [isOpen, setIsOpen] = React.useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div>
@@ -30,7 +44,10 @@ export default function DropDownMenu({ title, children }: DropDownMenuProps) {
         />
       </button>
       {isOpen && (
-        <div className="absolute left-0 w-full bg-white top-[64px] border-b">
+        <div
+          ref={menuRef}
+          className="absolute left-0 w-full bg-white top-[64px] border-b"
+        >
           {children}
         </div>
       )}
