@@ -1,12 +1,14 @@
 import Link from "next/link";
 import React from "react";
 import DropDownMenu from "./DropDownMenu";
+import CountrySelector from "./CountrySelector";
 
 export default function Header() {
   return (
     <>
-      <nav className="bg-white w-full h-16 flex items-center border-b sticky z-[100] top-0 left-0">
-        <div className="container w-full flex justify-between">
+      <nav className="bg-white w-full h-16 flex items-center border-b sticky top-0 left-0 z-[100]">
+        <div className="container flex justify-between items-center">
+          {/* Logo */}
           <Link href="/">
             <img
               src="/myfunus-logo.png"
@@ -18,12 +20,11 @@ export default function Header() {
           {/* Menus */}
           <div className="flex items-center gap-4">
             <DropDownMenu title="Voor uitvaartverzorgers">
-              <div className="container w-full flex gap-16 py-6">
-                <div className="block">
+              <div className="container flex gap-16 py-6">
+                <div>
                   <h3 className="font-bold text-gray-600 mb-3 text-sm">
                     Meer informatie
                   </h3>
-
                   <ul>
                     <li className="mb-2">
                       <Link
@@ -52,11 +53,10 @@ export default function Header() {
                   </ul>
                 </div>
 
-                <div className="block">
+                <div>
                   <h3 className="font-bold text-gray-600 mb-3 text-sm">
                     Mijn account
                   </h3>
-
                   <ul>
                     <li className="mb-2">
                       <Link
@@ -70,13 +70,15 @@ export default function Header() {
                 </div>
               </div>
             </DropDownMenu>
+
             <DropDownMenu title="Voor consumenten">
               <div className="p-4">Links Here</div>
             </DropDownMenu>
           </div>
+
+          <CountrySelector  />
         </div>
       </nav>
-      {/* <div className="h-[64px]"></div> */}
     </>
   );
 }
