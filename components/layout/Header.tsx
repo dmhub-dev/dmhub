@@ -74,10 +74,9 @@ export default function Header() {
             <DropDownMenu title="Voor consumenten">
               <div className="p-4">Links Here</div>
             </DropDownMenu>
-          </div>
 
-          <CountrySelector/>
-          
+            <CountrySelector />
+          </div>
         </div>
       </nav>
     </>
