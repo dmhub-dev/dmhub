@@ -52,7 +52,7 @@ export default function Header() {
                     </li>
                   </ul>
                 </div>
-
+              
                 <div>
                   <h3 className="font-bold text-gray-600 mb-3 text-sm">
                     Mijn account
@@ -72,7 +72,18 @@ export default function Header() {
             </DropDownMenu>
 
             <DropDownMenu title="Voor consumenten">
-              <div className="p-4">Links Here</div>
+              <div className="p-4">
+    <ul>
+      <li className="mb-2">
+        <Link
+          href="/about" 
+          className="text-sm text-gray-800 hover:text-primary"
+        >
+          Over Ons
+        </Link>
+      </li>
+    </ul>
+  </div>
             </DropDownMenu>
 
             <CountrySelector />
