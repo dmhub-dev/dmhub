@@ -5,12 +5,11 @@ import Hero from '@/components/layout/Hero';
 
 const About = () => {
   return (
-    <>
-    <Hero/>
-    
+    <>    
+            <Hero/>
+
       {/* Main Content Section */}
       <div
-        contentEditable="false"
         style={{
           border: '1px solid #ccc',
           padding: '10px',
@@ -19,8 +18,8 @@ const About = () => {
           float: 'right',
           boxShadow: '0 0 5px 1px rgb(209, 209, 209)',
           marginRight: '20rem',
-          position: 'relative', 
-          zIndex: -1,
+          marginTop: '-5rem',
+          backgroundColor: 'white',
         }}
       >
         <h1 style={{ fontSize: 30, fontFamily: 'Arial', color: 'teal', fontWeight: 'bold' }}>De kracht van MyFunus</h1>
