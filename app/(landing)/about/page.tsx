@@ -76,13 +76,15 @@ const About = () => {
           </div>
         </div>
 
-        <div style={{ width: '100vw !important', marginTop: '60px', backgroundColor: 'teal', padding: '5rem 10rem' , margin: 0, justifyContent: 'center'}}>
-          <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', color: 'white' }}>Waarom de naam Funus?</h2>
+        <div style={{ width: '100vw !important', marginTop: '60px', backgroundColor: 'teal', padding: '5rem 10rem', justifyContent: 'center', alignItems: 'center'}}>
+          <div>
+            <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', color: 'white' }}>Waarom de naam Funus?</h2>
+          </div>
           <p style={{ color: 'white'}}>
             De naam Funus komt uit het Latijns en betekent 'begrafenis' or 'uitvaart'. Funus helpt consumenten in de 
             zoektocht naar de uitvaartverzorger die bij hun past.
           </p>
-  </div>
+        </div>
 
       </div>
       
