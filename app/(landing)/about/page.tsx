@@ -1,10 +1,13 @@
 import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import Hero from '@/components/layout/Hero';
 
 const About = () => {
   return (
     <>
+    <Hero/>
+    
       {/* Main Content Section */}
       <div
         contentEditable="false"
@@ -16,6 +19,8 @@ const About = () => {
           float: 'right',
           boxShadow: '0 0 5px 1px rgb(209, 209, 209)',
           marginRight: '20rem',
+          position: 'relative', 
+          zIndex: -1,
         }}
       >
         <h1 style={{ fontSize: 30, fontFamily: 'Arial', color: 'teal', fontWeight: 'bold' }}>De kracht van MyFunus</h1>
@@ -77,7 +82,7 @@ const About = () => {
         </div>
 
         <div style={{ width: '100vw !important', marginTop: '60px', backgroundColor: 'teal', padding: '7rem 10rem', justifyContent: 'center', alignItems: 'center'}}>
-            <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', color: 'white', fontSize: 40}}>Waarom de naam Funus?</h2>
+            <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', color: 'white', fontSize: 40,}}>Waarom de naam Funus?</h2>
           <p style={{ color: 'white'}}>
             De naam Funus komt uit het Latijns en betekent 'begrafenis' or 'uitvaart'. 
             Funus helpt consumenten in de zoektocht naar de uitvaartverzorger die bij hun past.
