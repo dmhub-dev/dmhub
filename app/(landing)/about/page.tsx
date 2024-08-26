@@ -47,7 +47,7 @@ const About = () => {
       <div style={{ marginTop: '40px', }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginLeft: '20rem', marginRight: '20rem' }}>
           {/* Column 1 */}
-          <div style={{ width: '30%', padding: '1rem', borderLeft: '2px solid teal' }}>
+          <div style={{ width: '30%', padding: '1rem', borderLeft: '3px solid teal' }}>
             <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', color: '#333', fontSize: 20}}>Missie</h2>
             <p>
               De missie van Funus is om consumenten te helpen in de zoektocht naar de uitvaartverzorger die bij hun past op
@@ -56,7 +56,7 @@ const About = () => {
           </div>
 
           {/* Column 2 */}
-          <div style={{ width: '30%', padding: '1rem', borderLeft: '2px solid teal'}}>
+          <div style={{ width: '30%', padding: '1rem', borderLeft: '3px solid teal'}}>
             <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', color: '#333', fontSize: 20}}>Visie</h2>
             <p>
               Funus wil ervoor zorgen dat consumenten (mogelijke opdrachtgevers) op basis van zo volledig mogelijke
@@ -66,7 +66,7 @@ const About = () => {
           </div>
 
           {/* Column 3 */}
-          <div style={{ width: '30%', padding: '1rem', borderLeft: '2px solid teal'}}>
+          <div style={{ width: '30%', padding: '1rem', borderLeft: '3px solid teal'}}>
             <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', color: '#333', fontSize: 20}}>Persoonlijke betrokkenheid</h2>
             <p>
               Het persoonlijke aspect speelt een steeds grotere rol bij het regelen van een uitvaart. Consumenten willen
@@ -76,16 +76,13 @@ const About = () => {
           </div>
         </div>
 
-        <div style={{ width: '100vw !important', marginTop: '60px', backgroundColor: 'teal', padding: '5rem 10rem'}}>
-          <div>
+        <div style={{ width: '100vw !important', marginTop: '60px', backgroundColor: 'teal', padding: '7rem 10rem', justifyContent: 'center', alignItems: 'center'}}>
             <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', color: 'white', fontSize: 40}}>Waarom de naam Funus?</h2>
-          </div>
           <p style={{ color: 'white'}}>
             De naam Funus komt uit het Latijns en betekent 'begrafenis' or 'uitvaart'. 
             Funus helpt consumenten in de zoektocht naar de uitvaartverzorger die bij hun past.
           </p>
         </div>
-
       </div>
       
     </>
