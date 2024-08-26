@@ -3,7 +3,7 @@ import React from "react";
 
 const quickLinks = [
   { title: "Home", href: "/" },
-  { title: "Over ons", href: "/over-ons" },
+  { title: "Over ons", href: "/about" },
   { title: "meld je aan", href: "/meld-je-aan" },
   { title: "Contact", href: "/contact" },
   { title: "voorwaarden", href: "/voorwaarden" },

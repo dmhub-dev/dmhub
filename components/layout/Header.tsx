@@ -79,7 +79,7 @@ export default function Header() {
           href="/about" 
           className="text-sm text-gray-800 hover:text-primary"
         >
-          Over Ons
+          About
         </Link>
       </li>
     </ul>
