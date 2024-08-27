@@ -44,7 +44,7 @@ export default function Header() {
                     </li>
                     <li className="mb-2">
                       <Link
-                        href="/"
+                        href="/contact"
                         className="text-sm text-gray-800 hover:text-primary"
                       >
                         Contact

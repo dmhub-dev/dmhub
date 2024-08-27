@@ -82,7 +82,7 @@ const About = () => {
 
         <div style={{ width: '100vw !important', marginTop: '60px', backgroundColor: 'teal', padding: '7rem 10rem', justifyContent: 'center', alignItems: 'center'}}>
             <h2 style={{ fontFamily: 'Arial', fontWeight: 'bold', color: 'white', fontSize: 40, textAlign: 'center'}}>Waarom de naam Funus?</h2>
-          <p style={{ color: 'white', textAlign: 'center', display: 'inline-block'}}>
+          <p style={{ color: 'white', textAlign: 'center'}}>
             De naam Funus komt uit het Latijns en betekent 'begrafenis' or 'uitvaart'. Funus helpt consumenten in de 
             zoektocht naar de uitvaartverzorger die bij hun past.
           </p>
