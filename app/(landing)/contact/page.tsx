@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/layout/Hero';
 import ContactForm from '@/components/layout/ContactForm';
 
+
 const Contact = () => {
     return (
         <>    
@@ -29,7 +30,7 @@ const Contact = () => {
                     Wij stellen uw mening enorm op prijs!
         </p>
 
-        <ContactForm/>
+          <ContactForm/>
 
       </div>
 

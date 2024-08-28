@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '../ui/button';
 
-const ContactForm = () => {
+function ContactForm(): React.JSX.Element {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = (data: any) => {
@@ -16,8 +16,7 @@ const ContactForm = () => {
                     type="text"
                     placeholder="Voornaam"
                     {...register('voornaam', { required: true })}
-                    className="input-class"
-                />
+                    className="input-class" />
                 {errors.voornaam && <span className="error-text">Voornaam is required</span>}
             </div>
             <div className="form-group">
@@ -25,8 +24,7 @@ const ContactForm = () => {
                     type="text"
                     placeholder="Achternaam"
                     {...register('achternaam', { required: true })}
-                    className="input-class"
-                />
+                    className="input-class" />
                 {errors.achternaam && <span className="error-text">Achternaam is required</span>}
             </div>
             <div className="form-group">
@@ -34,13 +32,12 @@ const ContactForm = () => {
                     type="email"
                     placeholder="Email"
                     {...register('email', { required: true })}
-                    className="input-class"
-                />
+                    className="input-class" />
                 {errors.email && <span className="error-text">Email is required</span>}
             </div>
             <Button type="submit" className="bg-red-500 text-white">Verzend</Button>
         </form>
     );
-};
+}
 
 export default ContactForm;
