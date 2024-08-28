@@ -2,13 +2,12 @@ import React from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/layout/Hero';
+import ContactForm from '@/components/layout/ContactForm';
 
 const Contact = () => {
     return (
         <>    
             <Hero/>
-
-      {/* Main Content Section */}
       <div
         style={{
           border: '1px solid #ccc',
@@ -29,7 +28,9 @@ const Contact = () => {
                     We krijgen dan ook graag feedback van u als consument of als uitvaartverzorger. 
                     Wij stellen uw mening enorm op prijs!
         </p>
-        
+
+        <ContactForm/>
+
       </div>
 
       <div style={{ clear: 'both' }}></div>
