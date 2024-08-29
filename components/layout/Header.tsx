@@ -52,7 +52,7 @@ export default function Header() {
                     </li>
                   </ul>
                 </div>
-              
+
                 <div>
                   <h3 className="font-bold text-gray-600 mb-3 text-sm">
                     Mijn account
@@ -72,18 +72,23 @@ export default function Header() {
             </DropDownMenu>
 
             <DropDownMenu title="Voor consumenten">
-              <div className="p-4">
-    <ul>
-      <li className="mb-2">
-        <Link
-          href="/about" 
-          className="text-sm text-gray-800 hover:text-primary"
-        >
-          About
-        </Link>
-      </li>
-    </ul>
-  </div>
+              <div className="container flex gap-16 py-6">
+                <div>
+                  <h3 className="font-bold text-gray-600 mb-3 text-sm">
+                    Meer informatie
+                  </h3>
+                  <ul>
+                    <li className="mb-2">
+                      <Link
+                        href="/over-ons"
+                        className="text-sm text-gray-800 hover:text-primary"
+                      >
+                        Over ons
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </DropDownMenu>
 
             <CountrySelector />
