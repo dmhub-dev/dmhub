@@ -30,12 +30,15 @@ const Contact = () => {
                     We krijgen dan ook graag feedback van u als consument of als uitvaartverzorger. 
                     Wij stellen uw mening enorm op prijs!
         </p>
+
+        <ContactForm/>
+
       </div>
       
       <div style={{ width: '20%', marginLeft: 'auto', marginBottom: '5rem'}}> 
         <SideBar/> 
       </div>
-      
+            
       <div style={{ clear: 'both' }}></div>
       </>
     )
