@@ -9,48 +9,16 @@ type DropDownMenuProps = {
 };
 
 export default function DropDownMenu({ title, children }: DropDownMenuProps) {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleClickOutside = (event: MouseEvent) => {
-    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-      setIsOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
   return (
-    <div>
-      <button
-        onClick={toggleMenu}
-        className={`flex gap-1.5 items-center ${isOpen ? "text-primary" : ""}`}
-      >
+    <div className="group">
+      <button className="flex h-16 gap-1.5 items-center group-hover:text-primary">
         <span className="text-sm font-bold">{title}</span>
 
-        <ChevronDown
-          className={`size-6 transition-all stroke-[1.5] ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
+        <ChevronDown className="size-6 transition-all stroke-[1.5] group-hover:transform group-hover:rotate-180" />
       </button>
-      {isOpen && (
-        <div
-          ref={menuRef}
-          className="absolute left-0 w-full bg-white top-[64px] border-b"
-        >
-          {children}
-        </div>
-      )}
+      <div className="absolute left-0 w-full bg-white top-[64px] min-h-[300px] border-b hidden group-hover:block">
+        {children}
+      </div>
     </div>
   );
 }

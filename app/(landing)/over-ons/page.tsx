@@ -88,10 +88,10 @@ const About = () => {
       <section className="bg-secondary py-28 text-white mt-16">
         <div className="container max-w-4xl w-full">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
-            Waarom de naam Funus?
+            Waarom de naam myFunus?
           </h2>
           <p className="text-white/90">
-            De naam Funus komt uit het Latijns en betekent 'begrafenis' or
+            De naam myFunus komt uit het Latijns en betekent 'begrafenis' or
             'uitvaart'. Funus helpt consumenten in de zoektocht naar de
             uitvaartverzorger die bij hun past.
           </p>

@@ -18,9 +18,9 @@ export default function Home() {
         <AboutUs />
         <FuneralDirectorsSpotlight />
         <CTA
-          title="Voor onze uitvaart verzorgers"
-          description="Wilt u zich aansluiten bij Funus en ook makkelijk en snel gevonden worden voor het verzorgen van de perfecte uitvaart?"
-          linkText="Meld je hier aan"
+          title="Voor uitvaartverzorgers"
+          description="Wilt u zich aansluiten bij myFunus en ook makkelijk en snel gevonden worden voor het verzorgen van de perfecte uitvaart?"
+          linkText="Meer informatie"
           link="/aanmelden"
         />
       </main>
