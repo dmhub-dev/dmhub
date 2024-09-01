@@ -15,11 +15,17 @@ const consumentenLinks = [
   {
     title: "Informatie over uitvaarten",
     subLinks: [
-      { title: "Informatie over uitvaarten", href: "/over-ons" },
-      { title: "Een komend overlijden", href: "/over-ons" },
-      { title: "Wat doet een uitvaartverzorger", href: "/over-ons" },
-      { title: "Een uitvaart regelen", href: "/over-ons" },
-      { title: "Rouw en rouwverwerking", href: "/over-ons" },
+      { title: "Informatie over uitvaarten", href: "/info/over-uitvaarten" },
+      { title: "Een komend overlijden", href: "/info/komend-overlijden" },
+      {
+        title: "Wat doet een uitvaartverzorger",
+        href: "/info/wat-doet-een-uitvartverzorger",
+      },
+      { title: "Een uitvaart regelen", href: "/info/een-uitvaart-regelen" },
+      {
+        title: "Rouw en rouwverwerking",
+        href: "/info/rouw-en-rouwverwerkerking",
+      },
     ],
   },
 ];
