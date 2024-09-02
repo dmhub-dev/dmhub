@@ -5,7 +5,6 @@ import React from "react";
 import Benefits from "@/components/meld-u-aan/Benefits";
 import Testimonials from "@/components/home/Testimonials";
 import BusinessModels from "@/components/meld-u-aan/BusinessModels";
-import Link from "next/link";
 
 export default function SignUpPage() {
   return (
