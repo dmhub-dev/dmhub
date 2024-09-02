@@ -25,6 +25,9 @@ export default function SearchFilters() {
       const params = new URLSearchParams(searchParams.toString());
       params.set(name, value);
 
+      //move to page 1 on search filter change
+      params.set("page", "1");
+
       return params.toString();
     },
     [searchParams]

@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import {
   Select,
   SelectContent,
@@ -12,12 +12,15 @@ import {
 } from "@/components/ui/select";
 import LandscapeLayout from "../icons/LandscapeLayout";
 import GridLayout from "../icons/GridLayout";
+import { Edit3 } from "lucide-react";
+import LocationsSearchModal from "./LocationsSearchModal";
 
 export default function SearchHeader({
   resultsCount = 0,
 }: {
   resultsCount: number;
 }) {
+  const [showLocationSearch, setShowLocationSearch] = useState(false);
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -39,7 +42,14 @@ export default function SearchHeader({
     <section className="w-full container max-w-7xl flex justify-between py-4">
       <div className="text-gray-600">
         <p className="mb-2">{resultsCount} uitvaartverzorger gevonden</p>
-        <b>{address}</b>
+        <LocationsSearchModal>
+          <button className="hover:underline">
+            <b className="inline-flex items-center gap-2 hover:underline">
+              {address}
+              <Edit3 className="size-4 text-primary" />
+            </b>
+          </button>
+        </LocationsSearchModal>
       </div>
 
       <div>
