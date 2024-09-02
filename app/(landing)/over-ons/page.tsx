@@ -91,9 +91,10 @@ const About = () => {
             Waarom de naam myFunus?
           </h2>
           <p className="text-white/90">
-            De naam myFunus komt uit het Latijns en betekent 'begrafenis' or
-            'uitvaart'. Funus helpt consumenten in de zoektocht naar de
-            uitvaartverzorger die bij hun past.
+            De naam myFunus komt uit het Latijns en betekent
+            &apos;begrafenis&apos; or &apos;uitvaart&apos;. Funus helpt
+            consumenten in de zoektocht naar de uitvaartverzorger die bij hun
+            past.
           </p>
         </div>
       </section>

@@ -20,3 +20,21 @@ export async function getFeaturedDirectors(limit = 4) {
 
   return response.json();
 }
+
+export async function getPaginatedDirectors(limit = 20, page = 1) {
+  const query = qs.stringify(
+    {
+      pagination: {
+        pageSize: limit,
+        page: page,
+      },
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const response = await fetch(`${STRAPI_API_URL}/verzorgers?${query}`);
+
+  return response.json();
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "@/components/layout/Hero";
-import ContactForm from "@/components/layout/ContactForm";
 import SideBar from "@/components/layout/SideBar";
+import ContactForm from "@/components/contact/ContactForm";
 
 const Contact = () => {
   return (
@@ -14,7 +14,10 @@ const Contact = () => {
           </h1>
 
           <p className="mb-2.5 text-dimgray text-[16px]">
-            Bij myFunus stellen we alle informatie zorgvuldig samen en verbeteren we continu. We krijgen dan ook graag feedback van u als consument of als uitvaartverzorger. Wij stellen uw mening enorm op prijs!
+            Bij myFunus stellen we alle informatie zorgvuldig samen en
+            verbeteren we continu. We krijgen dan ook graag feedback van u als
+            consument of als uitvaartverzorger. Wij stellen uw mening enorm op
+            prijs!
           </p>
 
           <ContactForm />

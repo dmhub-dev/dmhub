@@ -9,17 +9,24 @@ const consumentenLinks = [
     subLinks: [
       { title: "Over ons", href: "/over-ons" },
       { title: "Veelgestelde vragen", href: "/veelgestelde-vragen" },
+      { title: "Zoek uw uitvaartverzorger", href: "/zoeken" },
       { title: "Contact", href: "/contact" },
     ],
   },
   {
     title: "Informatie over uitvaarten",
     subLinks: [
-      { title: "Informatie over uitvaarten", href: "/over-ons" },
-      { title: "Een komend overlijden", href: "/over-ons" },
-      { title: "Wat doet een uitvaartverzorger", href: "/over-ons" },
-      { title: "Een uitvaart regelen", href: "/over-ons" },
-      { title: "Rouw en rouwverwerking", href: "/over-ons" },
+      { title: "Informatie over uitvaarten", href: "/info/over-uitvaarten" },
+      { title: "Een komend overlijden", href: "/info/komend-overlijden" },
+      {
+        title: "Wat doet een uitvaartverzorger",
+        href: "/info/wat-doet-een-uitvartverzorger",
+      },
+      { title: "Een uitvaart regelen", href: "/info/een-uitvaart-regelen" },
+      {
+        title: "Rouw en rouwverwerking",
+        href: "/info/rouw-en-rouwverwerkerking",
+      },
     ],
   },
 ];
@@ -28,9 +35,12 @@ const uitvaartverzorgerLinks = [
   {
     title: "Meer informatie",
     subLinks: [
-      { title: "Meld u aan als uitvaartverzorger", href: "/over-ons" },
-      { title: "Veelgestelde vragen", href: "/over-ons" },
-      { title: "Contact", href: "/over-ons" },
+      { title: "Meld u aan als uitvaartverzorger", href: "/meld-u-aan" },
+      {
+        title: "Veelgestelde vragen",
+        href: "/veelgestelde-vragen?ql=uitvartverzorger",
+      },
+      { title: "Contact", href: "/contact?userType=uitvartverzorger" },
     ],
   },
   {
@@ -44,8 +54,9 @@ const productenLinks = [
     title: "Condoleancekaarten versturen",
     subLinks: [
       { title: "Kaarten versturen", href: "/" },
-      { title: "Vragen en Antwoorden", href: "/" },
-      { title: "Contact", href: "/" },
+      { title: "Vragen en Antwoorden", href: "/veelgestelde-vragen" },
+      { title: "Zoek uw uitvaartverzorger", href: "/zoeken" },
+      { title: "Contact", href: "/contact" },
     ],
   },
   {
