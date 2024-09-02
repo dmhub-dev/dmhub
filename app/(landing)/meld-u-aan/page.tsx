@@ -2,9 +2,10 @@ import Hero from "@/components/layout/Hero";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React from "react";
-import Benefits from "@/components/meld-u-aan/benefits";
+import Benefits from "@/components/meld-u-aan/Benefits";
 import Testimonials from "@/components/home/Testimonials";
 import BusinessModels from "@/components/meld-u-aan/BusinessModels";
+import Link from "next/link";
 
 export default function SignUpPage() {
   return (
@@ -49,7 +50,6 @@ export default function SignUpPage() {
             >
               Jouw bedrijf niet in de lijst?
             </a>
-
             <Button className="h-12">Gratis aanmelden</Button>
           </form>
         </div>
@@ -87,6 +87,7 @@ export default function SignUpPage() {
       <Testimonials/>
       
       <BusinessModels/>
+
     </>
   );
 }
