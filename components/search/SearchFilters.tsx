@@ -15,8 +15,10 @@ export default function SearchFilters() {
   const minPrice = parseInt(searchParams.get("min_price") || "0");
   const maxPrice = parseInt(searchParams.get("max_price") || "3000");
   const _sm = searchParams.get("sm") || "";
+  const _geslacht = searchParams.get("geslacht") || "";
 
-  const sm = [..._sm.split("~")];
+  const sm = [..._sm.split("~")].filter((s) => s !== "");
+  const geslacht = [..._geslacht.split("~")].filter((s) => s !== "");
 
   const createQueryString = useCallback(
     (name: string, value: string) => {
@@ -61,9 +63,9 @@ export default function SearchFilters() {
             <span className="flex-grow">Begrafenissen</span>
             <span className="inline-block mr-3 text-sm">(0)</span>
             <Checkbox
-              checked={includes(sm, "Begrafenissen")}
+              checked={includes(sm, "begrafenissen")}
               onCheckedChange={(v) =>
-                handleFilterCheck(v, "Begrafenissen", "sm", sm)
+                handleFilterCheck(v, "begrafenissen", "sm", sm)
               }
             />
           </label>
@@ -71,21 +73,29 @@ export default function SearchFilters() {
             <span className="flex-grow">Crematies</span>
             <span className="inline-block mr-3 text-sm">(0)</span>
             <Checkbox
-              checked={includes(sm, "Crematies")}
+              checked={includes(sm, "crematies")}
               onCheckedChange={(v) =>
-                handleFilterCheck(v, "Crematies", "sm", sm)
+                handleFilterCheck(v, "crematies", "sm", sm)
               }
             />
           </label>
           <label className="flex items-center mb-3 text-gray-600">
             <span className="flex-grow">Geloof</span>
             <span className="inline-block mr-3 text-sm">(0)</span>
-            <Checkbox />
+            <Checkbox
+              checked={includes(sm, "geloof")}
+              onCheckedChange={(v) => handleFilterCheck(v, "geloof", "sm", sm)}
+            />
           </label>
           <label className="flex items-center mb-3 text-gray-600">
             <span className="flex-grow">Budget uitvaart</span>
             <span className="inline-block mr-3 text-sm">(0)</span>
-            <Checkbox />
+            <Checkbox
+              checked={includes(sm, "budget-uitvaart")}
+              onCheckedChange={(v) =>
+                handleFilterCheck(v, "budget-uitvaart", "sm", sm)
+              }
+            />
           </label>
         </div>
       </section>
@@ -96,12 +106,22 @@ export default function SearchFilters() {
           <label className="flex items-center mb-3 text-gray-600">
             <span className="flex-grow">Man</span>
             <span className="inline-block mr-3 text-sm">(0)</span>
-            <Checkbox />
+            <Checkbox
+              checked={includes(geslacht, "man")}
+              onCheckedChange={(v) =>
+                handleFilterCheck(v, "man", "geslacht", geslacht)
+              }
+            />
           </label>
           <label className="flex items-center mb-3 text-gray-600">
             <span className="flex-grow">Vrouw</span>
             <span className="inline-block mr-3 text-sm">(0)</span>
-            <Checkbox />
+            <Checkbox
+              checked={includes(geslacht, "vrouw")}
+              onCheckedChange={(v) =>
+                handleFilterCheck(v, "vrouw", "geslacht", geslacht)
+              }
+            />
           </label>
         </div>
       </section>
