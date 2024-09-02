@@ -9,6 +9,7 @@ const consumentenLinks = [
     subLinks: [
       { title: "Over ons", href: "/over-ons" },
       { title: "Veelgestelde vragen", href: "/veelgestelde-vragen" },
+      { title: "Zoek uw uitvaartverzorger", href: "/zoeken" },
       { title: "Contact", href: "/contact" },
     ],
   },
@@ -34,9 +35,12 @@ const uitvaartverzorgerLinks = [
   {
     title: "Meer informatie",
     subLinks: [
-      { title: "Meld u aan als uitvaartverzorger", href: "/over-ons" },
-      { title: "Veelgestelde vragen", href: "/over-ons" },
-      { title: "Contact", href: "/over-ons" },
+      { title: "Meld u aan als uitvaartverzorger", href: "/meld-u-aan" },
+      {
+        title: "Veelgestelde vragen",
+        href: "/veelgestelde-vragen?ql=uitvartverzorger",
+      },
+      { title: "Contact", href: "/contact?userType=uitvartverzorger" },
     ],
   },
   {
@@ -50,8 +54,9 @@ const productenLinks = [
     title: "Condoleancekaarten versturen",
     subLinks: [
       { title: "Kaarten versturen", href: "/" },
-      { title: "Vragen en Antwoorden", href: "/" },
-      { title: "Contact", href: "/" },
+      { title: "Vragen en Antwoorden", href: "/veelgestelde-vragen" },
+      { title: "Zoek uw uitvaartverzorger", href: "/zoeken" },
+      { title: "Contact", href: "/contact" },
     ],
   },
   {
