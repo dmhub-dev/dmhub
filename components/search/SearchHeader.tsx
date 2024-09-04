@@ -43,12 +43,12 @@ export default function SearchHeader({
       <div className="text-gray-600">
         <p className="mb-2">{resultsCount} uitvaartverzorger gevonden</p>
         <LocationsSearchModal>
-          <button className="hover:underline">
+          <div className="hover:underline">
             <b className="inline-flex items-center gap-2 hover:underline">
               {address}
               <Edit3 className="size-4 text-primary" />
             </b>
-          </button>
+          </div>
         </LocationsSearchModal>
       </div>
 
