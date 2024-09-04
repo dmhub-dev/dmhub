@@ -45,7 +45,6 @@ export async function getPaginatedDirectors(limit = 20, page = 1) {
       encodeValuesOnly: true,
     }
   );
-  console.log(query);
 
   const response = await fetch(`${STRAPI_API_URL}/verzorgers?${query}`);
 

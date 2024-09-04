@@ -9,7 +9,6 @@ import React, { Suspense } from "react";
 export default async function SearchPage() {
   const res = await getPaginatedDirectors(21, 1);
   const resSearch = await getSearchResults({ verzorger: "" });
-  console.log(resSearch);
 
   const directorsCount = get(res, "meta.pagination.total");
   const directors = get(res, "data");

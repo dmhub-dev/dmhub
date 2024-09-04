@@ -2,7 +2,7 @@ import Hero from "@/components/layout/Hero";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React from "react";
-import Benefits from "@/components/meld-u-aan/benefits";
+import Benefits from "@/components/meld-u-aan/Benefits";
 import Testimonials from "@/components/home/Testimonials";
 import BusinessModels from "@/components/meld-u-aan/BusinessModels";
 
