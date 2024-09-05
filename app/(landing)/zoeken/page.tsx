@@ -2,12 +2,13 @@ import FuneralDirectorsList from "@/components/search/FuneralDirectorsList";
 import FuneralDirectorsPagination from "@/components/search/FuneralDirectorsPagination";
 import SearchFilters from "@/components/search/SearchFilters";
 import SearchHeader from "@/components/search/SearchHeader";
-import { getPaginatedDirectors } from "@/lib/strapi";
+import { getPaginatedDirectors, getSearchResults } from "@/lib/strapi";
 import { get } from "lodash";
 import React, { Suspense } from "react";
 
 export default async function SearchPage() {
   const res = await getPaginatedDirectors(21, 1);
+  const resSearch = await getSearchResults({ verzorger: "" });
 
   const directorsCount = get(res, "meta.pagination.total");
   const directors = get(res, "data");
