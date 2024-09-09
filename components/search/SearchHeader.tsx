@@ -56,7 +56,7 @@ export default function SearchHeader({
         <div className="flex justify-end gap-4">
           <button
             className={`cursor-pointer ${
-              layout === "landscape" ? "text-primary" : "text-secondary"
+              layout === "landscape" ? "text-secondary" : "text-[#3599c1]"
             }`}
             onClick={() =>
               router.push(
@@ -68,7 +68,7 @@ export default function SearchHeader({
           </button>
           <button
             className={`cursor-pointer ${
-              layout === "grid" ? "text-primary" : "text-secondary"
+              layout === "grid" ? "text-secondary" : "text-[#3599c1]"
             }`}
             onClick={() =>
               router.push(pathname + "?" + createQueryString("layout", "grid"))

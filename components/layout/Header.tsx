@@ -97,7 +97,7 @@ export default function Header() {
                         <li className="mb-2" key={subLink.title}>
                           <Link
                             href={subLink.href}
-                            className="text-sm text-secondary hover:text-primary"
+                            className="text-sm text-black hover:text-primary"
                           >
                             {subLink.title}
                           </Link>
@@ -121,7 +121,7 @@ export default function Header() {
                         <li className="mb-2" key={subLink.title}>
                           <Link
                             href={subLink.href}
-                            className="text-sm text-secondary hover:text-primary"
+                            className="text-sm text-black hover:text-primary"
                           >
                             {subLink.title}
                           </Link>
@@ -145,7 +145,7 @@ export default function Header() {
                         <li className="mb-2" key={subLink.title}>
                           <Link
                             href={subLink.href}
-                            className="text-sm text-secondary hover:text-primary"
+                            className="text-sm text-black hover:text-primary"
                           >
                             {subLink.title}
                           </Link>
@@ -158,7 +158,6 @@ export default function Header() {
             </DropDownMenu>
 
             <CountrySelector />
-          
           </div>
         </div>
       </nav>
