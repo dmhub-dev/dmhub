@@ -19,7 +19,7 @@ const plaasten = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#fafafa] w-full py-16 border-t">
+    <footer className="bg-[#fafafa] w-full py-[80px]">
       <div className="container w-full flex justify-between flex-wrap sm:flex-nowrap">
         <div className="mb-10 md:mb-0">
           <img
@@ -36,15 +36,15 @@ export default function Footer() {
           <p className="text-sm mb-1.5">info@myFunus.nl</p>
         </div>
 
-        <div className="flex gap-4 md:gap-16 justify-center mb-10 md:mb-0">
+        <div className="flex gap-4 md:gap-6 justify-center mb-10 md:mb-0">
           <div>
-            <h3 className="font-bold uppercase mb-3">Funus</h3>
+            <h3 className="font-bold uppercase text-base mb-[6px]">Funus</h3>
             <ul>
               {quickLinks.map((link) => (
                 <li key={link.title}>
                   <Link
                     href={link.href}
-                    className="text-sm mb-2 inline-block hover:text-primary"
+                    className="text-sm mb-[6px] inline-block hover:text-blue-500"
                   >
                     {link.title}
                   </Link>
@@ -54,13 +54,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold uppercase mb-3">plaatsen</h3>
+            <h3 className="font-bold uppercase text-base mb-[6px]">plaatsen</h3>
             <ul>
               {plaasten.map((link) => (
                 <li key={link.title}>
                   <Link
                     href={link.href}
-                    className="text-sm mb-2 inline-block hover:text-primary"
+                    className="text-sm mb-[6px] inline-block hover:text-blue-500"
                   >
                     {link.title}
                   </Link>
@@ -71,8 +71,8 @@ export default function Footer() {
         </div>
 
         <div className="md:text-end">
-          <h4 className="font-bold mb-4">Wil je ons volgen?</h4>
-          <ul className="flex gap-4 md:justify-end mb-4">
+          <h4 className="font-bold text-base mb-[21px]">Wil je ons volgen?</h4>
+          <ul className="flex gap-4 md:justify-end mb-[21px]">
             <li>
               <a
                 href="http://linkedin.com"
@@ -121,23 +121,23 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container mt-12">
+      <div className="container mt-[30px]">
         <p className="md:text-center text-sm">
           <Link href="/privacy" className="hover:text-secondary">
             Algemene voorwaarden
-          </Link>{" "}
-          |{" "}
+          </Link>
+          <span className="mx-[6px]">|</span>
           <Link href="/privacy" className="hover:text-secondary">
             Privacy
-          </Link>{" "}
-          |{" "}
+          </Link>
+          <span className="mx-[6px]">|</span>
           <Link href="/cookies-policy" className="hover:text-secondary">
             Cookies
           </Link>
         </p>
       </div>
 
-      <div className="container mt-10">
+      <div className="container mt-[30px]">
         <p className="md:text-center text-sm">
           Copyright © {new Date().getFullYear()} myFunus, alle rechten
           voorbehouden.
