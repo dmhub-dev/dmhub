@@ -5,8 +5,10 @@ export default function AboutUs() {
   return (
     <section className="w-full py-16 bg-secondary text-white">
       <div className="container max-w-xl w-full">
-        <h2 className="font-bold mb-4 text-3xl md:text-4xl">Over myFunus</h2>
-        <article className="space-y-4 mb-4">
+        <h2 className="font-bold mb-[20px] text-[35px] md:text-[35px]">
+          Over myFunus
+        </h2>
+        <article className="space-y-4 mb-4 text-base">
           <p>
             Bij het regelen van een uitvaart is één van de eerste stappen het
             vinden van de juiste uitvaartverzorger. Dit is niet altijd even

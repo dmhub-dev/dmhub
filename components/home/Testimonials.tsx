@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <section className="py-16 pb-20 max-w-6xl container w-full grid gap-14 md:gap-0 md:flex items-center">
+    <section className="py-16 pb-20 max-w-[1200px] container w-full grid gap-14 md:gap-0 md:flex items-center">
       <TestimonialCard
         name="Zeer professioneel"
         description="Fijn en betrouwbaar bedrijf. Eerlijke uitvaartverzorger. Prima verzorgd"
@@ -40,15 +40,15 @@ const TestimonialCard = ({
 }) => {
   return (
     <div
-      className={`p-8 text-center md:w-1/3 relative ${
+      className={`px-[30px] pb-3 pt-3 text-center md:w-1/3 relative ${
         standout
           ? "bg-secondary text-white md:-mx-8 md:-mt-20 z-10"
           : "bg-gray-200"
       }`}
     >
-      <Quote className="inline-block h-16 w-auto" />
+      <Quote className="inline-block h-[60px] w-auto" />
 
-      <h4 className="font-bold text-lg mb-1">{name}</h4>
+      <h4 className="font-bold text-base mb-1">{name}</h4>
       <p className="text-graytext">{description}</p>
 
       <img
@@ -56,7 +56,7 @@ const TestimonialCard = ({
         width={100}
         height={100}
         alt={name}
-        className="inline-block -mb-20 size-16 rounded-full"
+        className="inline-block -mb-12 size-[60px] rounded-full"
       />
     </div>
   );

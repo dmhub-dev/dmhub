@@ -29,8 +29,10 @@ const FuneralDirectorCard = ({
             {director.rating || "4.5"}
           </div>
         </div>
-        <h3 className="font-bold text-lg">{director.naam}</h3>
-        <p className="text-muted-foreground text-sm mt-2">{director.werk}</p>
+        <h3 className="font-bold text-lg text-center">{director.naam}</h3>
+        <p className="text-muted-foreground text-sm mt-2 text-center">
+          {director.werk}
+        </p>
         <p className="mt-4 text-center text-sm text-secondary">
           <b>Aannametarief:</b> {director.price_range || "€ 1000 - € 2000"}
         </p>
