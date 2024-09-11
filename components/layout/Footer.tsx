@@ -2,10 +2,10 @@ import Link from "next/link";
 import React from "react";
 
 const quickLinks = [
-  { title: "Home", href: "/" },
-  { title: "Over ons", href: "/over-ons" },
+  { title: "home", href: "/" },
+  { title: "over ons", href: "/over-ons" },
   { title: "meld je aan", href: "/meld-je-aan" },
-  { title: "Contact", href: "/contact" },
+  { title: "contact", href: "/contact" },
   { title: "voorwaarden", href: "/voorwaarden" },
 ];
 
