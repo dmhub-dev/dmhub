@@ -19,7 +19,7 @@ const plaasten = [
 
 export default function Footer() {
   return (
-    <footer className="bg-white w-full py-16 border-t">
+    <footer className="bg-[#fafafa] w-full py-16 border-t">
       <div className="container w-full flex justify-between flex-wrap sm:flex-nowrap">
         <div className="mb-10 md:mb-0">
           <img
