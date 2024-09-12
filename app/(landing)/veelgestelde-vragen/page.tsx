@@ -44,12 +44,12 @@ export default function FAQs() {
   return (
     <>
       <Hero />
-      <section className="container max-w-6xl w-full flex justify-end mb-8">
-        <div className="bg-white shadow-lg p-10 md:p-16 md:w-2/3 -mt-20">
-          <h1 className="text-2xl md:text-4xl font-bold text-secondary mb-4">
+      <section className="container max-w-[1280px] w-full flex justify-end mb-8">
+        <div className="bg-white shadow-lg px-4 py-6 md:px-[60px] md:w-full max-w-[920px] -mt-20">
+          <h1 className="text-2xl md:text-4xl font-bold text-secondary mb-2">
             Vragen & Antwoorden
           </h1>
-          <p className="text-gray-600 mb-6">Wij willen u graag helpen.</p>
+          <p className="text-gray-600 mb-8">Wij willen u graag helpen.</p>
 
           <Accordion type="single" collapsible>
             {faqs.map((faq, index) => (
