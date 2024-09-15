@@ -42,11 +42,11 @@ export default function FeaturesList({ features = featuresDefault }) {
         De voordelen van myFunus
       </h2>
 
-      <div className="mt-8 w-full grid md:grid-cols-3 gap-8">
+      <div className="mt-8 w-full grid md:grid-cols-3 gap-[15px]">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="flex items-center gap-4 text-start text-darktext"
+            className="flex items-center gap-4 text-start text-darktext p-2"
           >
             <img
               src={feature.icon}
@@ -57,7 +57,7 @@ export default function FeaturesList({ features = featuresDefault }) {
               <h3 className="text-base font-bold text-darktext leading-[19px] mb-[3px]">
                 {feature.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-[19px]">
+              <p className="text-base text-darktext leading-[19px]">
                 {feature.description}
               </p>
             </div>

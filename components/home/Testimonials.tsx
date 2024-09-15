@@ -40,7 +40,7 @@ const TestimonialCard = ({
 }) => {
   return (
     <div
-      className={`px-[30px] pb-3 pt-3 text-center md:w-1/3 relative ${
+      className={`px-[30px] pb-3 pt-4 text-center md:w-1/3 relative ${
         standout
           ? "bg-secondary text-white md:-mx-8 md:-mt-20 z-10"
           : "bg-gray-200 text-darktext"
