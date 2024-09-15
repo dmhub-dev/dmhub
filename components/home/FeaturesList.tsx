@@ -54,10 +54,10 @@ export default function FeaturesList({ features = featuresDefault }) {
               className="h-[45px] w-auto"
             />
             <div>
-              <h3 className="text-base font-bold text-darktext">
+              <h3 className="text-base font-bold text-darktext leading-[19px] mb-[3px]">
                 {feature.title}
               </h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground leading-[19px]">
                 {feature.description}
               </p>
             </div>

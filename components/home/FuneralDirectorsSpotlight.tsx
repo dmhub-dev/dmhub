@@ -13,7 +13,7 @@ export default async function FuneralDirectorsSpotlight() {
     <>
       <section className="w-full my-[80px]">
         <div className="container max-w-xl text-center mt-[30px]">
-          <h2 className="font-bold text-[35px] mb-[20px] mt-[20px]">
+          <h2 className="font-bold text-[35px] mb-[20px]">
             {directorsCount} uitvaart verzorgers
           </h2>
           <p className="text-darktext">

@@ -16,13 +16,14 @@ export default function Search() {
 
   return (
     <section className="w-full container">
-      <div className="max-w-[500px] w-full -mt-[80px] mx-auto bg-white p-6 md:p-8 shadow-xl space-y-2">
-        <h2 className="font-bold text-2xl mb-4">
+      <div className="max-w-[520px] w-full -mt-[80px] mx-auto bg-white p-6 md:p-8 md:px-[27px] shadow-xl space-y-[6px]">
+        <h2 className="font-bold text-[22px] leading-[1.1] mb-[30px] text-darktext">
           Vind de uw uitvaartverzorger die bij u past
         </h2>
         <div className="relative w-full">
           <Input
             placeholder="Postcode of plaatsnaam"
+            className="placeholder-darktext"
             value={postcode}
             onChange={(e) => setPostcode(e.target.value)}
           />
@@ -48,6 +49,7 @@ export default function Search() {
         <div className="relative w-full">
           <Input
             placeholder="Zoek op naam of bedrijfsnaam"
+            className="placeholder-darktext"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -72,7 +74,9 @@ export default function Search() {
             </div>
           )}
         </div>
-        <Button className="w-full h-[35px]">Zoek uw uitvaartverzorger</Button>
+        <Button className="w-full h-[35px] font-bold leading-[19px] text-base">
+          Zoek uw uitvaartverzorger
+        </Button>
       </div>
     </section>
   );

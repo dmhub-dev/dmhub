@@ -72,7 +72,7 @@ const productenLinks = [
 export default function Header() {
   return (
     <>
-      <nav className="bg-white w-full h-16 flex items-center border-b sticky top-0 left-0 z-[100]">
+      <nav className="bg-white w-full h-16 flex items-center border-b border-b-black sticky top-0 left-0 z-[100]">
         <div className="container flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
@@ -89,12 +89,12 @@ export default function Header() {
               <div className="container flex gap-16 py-6">
                 {consumentenLinks.map((linkGroup) => (
                   <div key={linkGroup.title}>
-                    <h3 className="font-bold text-gray-600 mb-3 text-sm">
+                    <h3 className="font-bold text-gray-600 mb-[9px] text-base">
                       {linkGroup.title}
                     </h3>
                     <ul>
                       {linkGroup.subLinks.map((subLink) => (
-                        <li className="mb-2" key={subLink.title}>
+                        <li className="mb-0" key={subLink.title}>
                           <Link
                             href={subLink.href}
                             className="text-sm text-black hover:text-primary"
@@ -113,12 +113,12 @@ export default function Header() {
               <div className="container flex gap-16 py-6">
                 {uitvaartverzorgerLinks.map((linkGroup) => (
                   <div key={linkGroup.title}>
-                    <h3 className="font-bold text-gray-600 mb-3 text-sm">
+                    <h3 className="font-bold text-gray-600 mb-[9px] text-base">
                       {linkGroup.title}
                     </h3>
                     <ul>
                       {linkGroup.subLinks.map((subLink) => (
-                        <li className="mb-2" key={subLink.title}>
+                        <li className="mb-0" key={subLink.title}>
                           <Link
                             href={subLink.href}
                             className="text-sm text-black hover:text-primary"
@@ -137,12 +137,12 @@ export default function Header() {
               <div className="container flex gap-16 py-6">
                 {productenLinks.map((linkGroup) => (
                   <div key={linkGroup.title}>
-                    <h3 className="font-bold text-gray-600 mb-3 text-sm">
+                    <h3 className="font-bold text-gray-600 mb-[9px] text-base">
                       {linkGroup.title}
                     </h3>
                     <ul>
                       {linkGroup.subLinks.map((subLink) => (
-                        <li className="mb-2" key={subLink.title}>
+                        <li className="mb-0" key={subLink.title}>
                           <Link
                             href={subLink.href}
                             className="text-sm text-black hover:text-primary"

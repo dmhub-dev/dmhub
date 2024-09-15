@@ -7,7 +7,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ backgroundImg = "/img/hero-bg.jpg" }) => {
   return (
     <div
-      className="bg-cover w-full h-[180px]"
+      className="bg-cover w-full h-[180px] bg-[80%]"
       style={{ backgroundImage: `url(${backgroundImg})` }}
     ></div>
   );

@@ -43,13 +43,13 @@ const TestimonialCard = ({
       className={`px-[30px] pb-3 pt-3 text-center md:w-1/3 relative ${
         standout
           ? "bg-secondary text-white md:-mx-8 md:-mt-20 z-10"
-          : "bg-gray-200"
+          : "bg-gray-200 text-darktext"
       }`}
     >
       <Quote className="inline-block h-[60px] w-auto" />
 
-      <h4 className="font-bold text-base mb-1">{name}</h4>
-      <p className="text-graytext">{description}</p>
+      <h4 className="font-bold text-base mb-0 leading-[19px]">{name}</h4>
+      <p className="text-graytext leading-[19px]">{description}</p>
 
       <img
         src={img}
