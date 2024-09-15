@@ -85,7 +85,7 @@ export default function Header() {
 
           {/* Menus */}
           <div className="hidden md:flex items-center gap-4">
-            <DropDownMenu title="Consumenten">
+            <DropDownMenu title="Voor Consumenten">
               <div className="container flex gap-16 py-6">
                 {consumentenLinks.map((linkGroup) => (
                   <div key={linkGroup.title}>
@@ -109,7 +109,7 @@ export default function Header() {
               </div>
             </DropDownMenu>
 
-            <DropDownMenu title="Uitvaartverzorgers">
+            <DropDownMenu title="Voor Uitvaartverzorgers">
               <div className="container flex gap-16 py-6">
                 {uitvaartverzorgerLinks.map((linkGroup) => (
                   <div key={linkGroup.title}>
