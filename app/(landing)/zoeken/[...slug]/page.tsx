@@ -6,12 +6,25 @@ import { getPaginatedDirectors, getSearchResults } from "@/lib/strapi";
 import { get } from "lodash";
 import React, { Suspense } from "react";
 
-export default async function SearchPage() {
-  const res = await getPaginatedDirectors(21, 1);
-  const resSearch = await getSearchResults({ verzorger: "" });
+export default async function SearchPage({
+  params,
+}: {
+  params: { slug: string[] };
+}) {
+  const city = params.slug[0];
+  const postcode = params.slug?.[1];
 
-  const directorsCount = get(res, "meta.pagination.total");
-  const directors = get(res, "data");
+  const resSearch = await getSearchResults({
+    verzorger: "",
+    postcode: {
+      postcode: postcode,
+      city: city,
+    },
+  });
+
+  const directorsCount = get(resSearch, "count", 0);
+  const directors: any[] | undefined = get(resSearch, "verzorgers");
+  console.log(resSearch);
 
   return (
     <Suspense>

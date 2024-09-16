@@ -1,8 +1,4 @@
-import {
-  fetchSpotlight,
-  getFeaturedDirectors,
-  getSearchResults,
-} from "@/lib/strapi";
+import { getFeaturedDirectors } from "@/lib/strapi";
 import React from "react";
 import get from "lodash/get";
 import FuneralDirectorCard from "../search/FuneralDirectorCard";
