@@ -4,16 +4,23 @@ import React, { useCallback } from "react";
 import { Checkbox } from "../ui/checkbox";
 import { Slider } from "../ui/slider";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { includes } from "lodash";
+import { find, includes } from "lodash";
 
-export default function SearchFilters() {
+export default function SearchFilters({ filters }: { filters: any }) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
 
+  const priceOptions = find(filters, { name: "tarief" });
+  const genderOptions = find(filters, { name: "geslacht" });
+
   const address = searchParams.get("address") || "All locations";
-  const minPrice = parseInt(searchParams.get("min_price") || "0");
-  const maxPrice = parseInt(searchParams.get("max_price") || "3000");
+  const minPrice = parseInt(
+    searchParams.get("min_price") || priceOptions.range.min
+  );
+  const maxPrice = parseInt(
+    searchParams.get("max_price") || priceOptions.range.max
+  );
   const _sm = searchParams.get("sm") || "";
   const _geslacht = searchParams.get("geslacht") || "";
 
@@ -108,7 +115,9 @@ export default function SearchFilters() {
         <div>
           <label className="flex items-center mb-3 text-gray-600">
             <span className="flex-grow">Man</span>
-            <span className="inline-block mr-3 text-sm">(0)</span>
+            <span className="inline-block mr-3 text-sm">
+              ({genderOptions?.options[0]?.verzorgers?.length || "0"})
+            </span>
             <Checkbox
               checked={includes(geslacht, "man")}
               onCheckedChange={(v) =>
@@ -118,7 +127,9 @@ export default function SearchFilters() {
           </label>
           <label className="flex items-center mb-3 text-gray-600">
             <span className="flex-grow">Vrouw</span>
-            <span className="inline-block mr-3 text-sm">(0)</span>
+            <span className="inline-block mr-3 text-sm">
+              ({genderOptions?.options[1]?.verzorgers?.length || "0"})
+            </span>
             <Checkbox
               checked={includes(geslacht, "vrouw")}
               onCheckedChange={(v) =>

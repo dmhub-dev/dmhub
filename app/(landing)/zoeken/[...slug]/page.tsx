@@ -24,13 +24,15 @@ export default async function SearchPage({
 
   const directorsCount = get(resSearch, "count", 0);
   const directors: any[] | undefined = get(resSearch, "verzorgers");
-  console.log(resSearch);
+
+  const filters = get(resSearch, "options");
+  console.log(filters);
 
   return (
     <Suspense>
       <SearchHeader resultsCount={directorsCount} />
       <section className="w-full container max-w-7xl grid md:grid-cols-[240px_1fr] gap-8 mt-4 mb-16">
-        <SearchFilters />
+        <SearchFilters filters={filters} />
         <section className="w-full">
           <FuneralDirectorsList directors={directors} />
 
