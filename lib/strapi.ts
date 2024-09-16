@@ -147,3 +147,46 @@ export const fetchSpotlight = async () => {
 
   return response.data;
 };
+
+export const searchPostcodes = async (query: string) => {
+  const strapiClient = createStrapiClient();
+
+  const response = await strapiClient.get<SearchPostcodes>(
+    "/funus/postcodes/options",
+    {
+      params: {
+        query,
+      },
+    }
+  );
+
+  return response.data;
+};
+
+export type SearchVerzorgers = {
+  verzorgers: verzorger[];
+  ondernemingen: onderneming[];
+};
+
+export const searchVerzorgers = async (query: string) => {
+  const strapiClient = createStrapiClient();
+
+  const response = await strapiClient.get<SearchVerzorgers>(
+    "/funus/verzorgers/options",
+    {
+      params: {
+        query,
+      },
+    }
+  );
+
+  return response.data;
+};
+
+export const getNavigation = async () => {
+  const strapiClient = createStrapiClient();
+
+  const response = await strapiClient.get("/funus/navigation");
+
+  return response.data;
+};

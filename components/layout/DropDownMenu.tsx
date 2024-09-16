@@ -16,7 +16,7 @@ export default function DropDownMenu({ title, children }: DropDownMenuProps) {
 
         <ChevronDown className="size-6 transition-all stroke-[1.5] group-hover:transform group-hover:rotate-180" />
       </button>
-      <div className="absolute left-0 w-full bg-white top-[64px] min-h-[300px] border-b hidden group-hover:block">
+      <div className="absolute left-0 w-full bg-white top-[64px] min-h-[200px] border-b hidden group-hover:block">
         {children}
       </div>
     </div>

@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { X } from "lucide-react";
+import { searchPostcodes, searchVerzorgers } from "@/lib/strapi";
+import { useRouter } from "next/navigation";
 
 const initialSearchState = {
   postcode: "",
@@ -11,8 +13,67 @@ const initialSearchState = {
 };
 
 export default function Search() {
+  const router = useRouter();
+
   const [postcode, setPostcode] = useState("");
   const [name, setName] = useState("");
+  const [selectedCity, setSelectedCity] = useState("");
+  const [selectedPostcode, setSelectedPostcode] = useState("");
+
+  const [postcodeOptions, setPostcodeOptions] = useState<any[]>([]);
+  const [directorsOptions, setDirectorsOptions] = useState<any[]>([]);
+  const [postCodeLoading, setPostCodeLoading] = useState(false);
+  const [directorsLoading, setDirectorsLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchPostcodeOptions = async () => {
+      try {
+        setPostCodeLoading(true);
+        let res = await searchPostcodes(postcode);
+
+        setPostcodeOptions(res.postcodes);
+        setPostCodeLoading(false);
+      } catch (err) {
+        console.log(err);
+        setPostCodeLoading(false);
+      }
+    };
+
+    if (postcode.length > 1 && postcode.length < 6) {
+      fetchPostcodeOptions();
+    }
+
+    return () => {};
+  }, [postcode]);
+
+  useEffect(() => {
+    const fetchDirectorsOptions = async () => {
+      try {
+        setDirectorsLoading(true);
+        let res = await searchVerzorgers(name);
+
+        setDirectorsOptions(res.verzorgers);
+        setDirectorsLoading(false);
+      } catch (err) {
+        console.log(err);
+        setDirectorsLoading(false);
+      }
+    };
+
+    if (name.length > 1) {
+      fetchDirectorsOptions();
+    }
+
+    return () => {};
+  }, [name]);
+
+  const handleSearch = () => {
+    if (selectedCity) {
+      router.push(`/zoeken/${selectedCity}/${selectedPostcode}`);
+    } else {
+      router.push(`/zoeken`);
+    }
+  };
 
   return (
     <section className="w-full container">
@@ -20,7 +81,7 @@ export default function Search() {
         <h2 className="font-bold text-[22px] leading-[1.1] mb-[30px] text-darktext">
           Vind de uw uitvaartverzorger die bij u past
         </h2>
-        <div className="relative w-full">
+        <div className="relative block w-full group">
           <Input
             placeholder="Postcode of plaatsnaam"
             className="placeholder-darktext"
@@ -36,17 +97,35 @@ export default function Search() {
             </button>
           )}
           {postcode && postcode.length > 1 && (
-            <div className="w-full absolute top-10 shadow-custom bg-white z-50">
+            <div className="w-full hidden group-focus-within:block absolute top-10 shadow-custom bg-white z-50">
               <div className="py-[9px] px-4">
                 <h4 className="text-sm font-bold text-darktext">Postcodes</h4>
               </div>
-              <div className="py-2 px-4">
-                <p className="text-sm text-darktext">Loading...</p>
+              <div className="pb-2 w-full">
+                {postCodeLoading && (
+                  <p className="text-sm text-darktext px-4">Loading...</p>
+                )}
+
+                {postcodeOptions.map((i) => (
+                  <button
+                    type="button"
+                    key={i.slug}
+                    onClick={() => {
+                      setSelectedPostcode(i.slug);
+                      setSelectedCity(i.city.slug);
+
+                      setPostcode(`${i.postcode} ${i.city.name}`);
+                    }}
+                    className="block w-full px-4 text-start leading-[19px] hover:bg-secondary hover:text-white py-[3px]"
+                  >
+                    {i.postcode} {i.city.name}
+                  </button>
+                ))}
               </div>
             </div>
           )}
         </div>
-        <div className="relative w-full">
+        <div className="relative w-full group">
           <Input
             placeholder="Zoek op naam of bedrijfsnaam"
             className="placeholder-darktext"
@@ -62,19 +141,37 @@ export default function Search() {
             </button>
           )}
           {name && name.length > 1 && (
-            <div className="w-full absolute top-10 shadow-custom bg-white z-50">
+            <div className="w-full absolute hidden group-focus-within:block top-10 shadow-custom bg-white z-50">
               <div className="py-[9px] px-4">
                 <h4 className="text-sm font-bold text-darktext">
                   Uitvaartverzorgers
                 </h4>
               </div>
-              <div className="py-2 px-4">
-                <p className="text-sm text-darktext">Loading...</p>
+              <div className="py-2">
+                {directorsLoading && (
+                  <p className="text-sm text-darktext px-4">Loading...</p>
+                )}
+
+                {directorsOptions.map((i) => (
+                  <button
+                    type="button"
+                    key={i.id}
+                    onClick={() => {
+                      setName(i.naam);
+                    }}
+                    className="block w-full px-4 text-start leading-[19px] hover:bg-secondary hover:text-white py-[3px]"
+                  >
+                    {i.naam}
+                  </button>
+                ))}
               </div>
             </div>
           )}
         </div>
-        <Button className="w-full h-[35px] font-bold leading-[19px] text-base">
+        <Button
+          onClick={handleSearch}
+          className="w-full h-[35px] font-bold leading-[19px] text-base"
+        >
           Zoek uw uitvaartverzorger
         </Button>
       </div>

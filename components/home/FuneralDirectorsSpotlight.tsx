@@ -1,4 +1,8 @@
-import { getFeaturedDirectors } from "@/lib/strapi";
+import {
+  fetchSpotlight,
+  getFeaturedDirectors,
+  getSearchResults,
+} from "@/lib/strapi";
 import React from "react";
 import get from "lodash/get";
 import FuneralDirectorCard from "../search/FuneralDirectorCard";
@@ -21,14 +25,14 @@ export default async function FuneralDirectorsSpotlight() {
           </p>
         </div>
       </section>
-      <div className="bg-cover w-full h-[280px] md:h-[240px] bg-[url(/img/hero-bg.jpg)]">
+      <div className="bg-cover w-full h-[280px] md:h-[240px] bg-[url(/img/hero-bg.jpg)] bg-[80%]">
         <div className="container py-20">
           <h2 className="text-4xl font-bold text-center">
             Deze week in de spotlight
           </h2>
         </div>
       </div>
-      <section className="container max-w-7xl grid md:grid-cols-4 gap-6  mb-16 -my-16">
+      <section className="container grid md:grid-cols-4 gap-6  mb-16 -my-20">
         {directors.map((director: any) => (
           <FuneralDirectorCard
             key={director.id}

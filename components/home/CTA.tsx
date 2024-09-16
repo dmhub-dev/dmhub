@@ -14,7 +14,7 @@ export default function CTA({ title, description, linkText, link }: CTAProps) {
     <section className="w-full py-[80px] bg-secondary text-white">
       <div className="container max-w-xl w-full mt-[20px]">
         <h2 className="font-bold mb-[20px] text-4xl">{title}</h2>
-        <article className="space-y-4 mb-[20px]">
+        <article className="space-y-4 mb-[20px] leading-[19px]">
           <p>{description}</p>
         </article>
         <Link

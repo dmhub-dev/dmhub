@@ -8,7 +8,7 @@ export default function AboutUs() {
         <h2 className="font-bold mb-[20px] text-[35px] md:text-[35px]">
           Over myFunus
         </h2>
-        <article className="space-y-4 mb-4 text-base">
+        <article className="space-y-4 mb-4 text-base leading-[19px]">
           <p>
             Bij het regelen van een uitvaart is één van de eerste stappen het
             vinden van de juiste uitvaartverzorger. Dit is niet altijd even

@@ -75,6 +75,7 @@ const config = {
       },
       boxShadow: {
         custom: "0 4px 16px 0 rgba(0, 0, 0, 0.2)",
+        card: "0 3px 12px 0 rgba(7,7,7,0.15)",
       },
     },
   },
