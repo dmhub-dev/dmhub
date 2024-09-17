@@ -77,9 +77,9 @@ export default function Search() {
 
   return (
     <section className="w-full container">
-      <div className="max-w-[520px] w-full -mt-[80px] mx-auto bg-white p-6 md:p-8 md:px-[27px] shadow-xl space-y-[6px]">
+      <div className="max-w-[480px] w-full -mt-[80px] mx-auto bg-white p-6 md:p-8 md:px-[27px] shadow-xl space-y-[6px]">
         <h2 className="font-bold text-[22px] leading-[1.1] mb-[30px] text-darktext">
-          Vind de uw uitvaartverzorger die bij u past
+          Vind de uitvaartverzorger die bij u past
         </h2>
         <div className="relative block w-full group">
           <Input
