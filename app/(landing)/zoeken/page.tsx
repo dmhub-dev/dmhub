@@ -7,17 +7,24 @@ import { get } from "lodash";
 import React, { Suspense } from "react";
 
 export default async function SearchPage() {
-  const res = await getPaginatedDirectors(21, 1);
-  const resSearch = await getSearchResults({ verzorger: "" });
+  const resSearch = await getSearchResults({
+    verzorger: "",
+    postcode: {
+      postcode: "",
+      city: "",
+    },
+  });
 
-  const directorsCount = get(res, "meta.pagination.total");
-  const directors = get(res, "data");
+  const directorsCount = get(resSearch, "count", 0);
+  const directors: any[] | undefined = get(resSearch, "verzorgers");
+
+  const filters = get(resSearch, "options");
 
   return (
     <Suspense>
       <SearchHeader resultsCount={directorsCount} />
       <section className="w-full container max-w-7xl grid md:grid-cols-[240px_1fr] gap-8 mt-4 mb-16">
-        <SearchFilters />
+        <SearchFilters filters={filters} />
         <section className="w-full">
           <FuneralDirectorsList directors={directors} />
 
