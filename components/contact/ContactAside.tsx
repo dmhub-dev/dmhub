@@ -1,74 +1,49 @@
 import React from "react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const ContactAside = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "1rem",
-        width: "300px",
-      }}
-    >
+    <div>
       {/* Bent u uitvaartverzorger Section */}
-      <div
-        style={{
-          backgroundColor: "#4A4A4A",
-          color: "white",
-          padding: "1.5rem",
-          textAlign: "center",
-          borderRadius: "8px",
-        }}
-      >
-        <h2
-          style={{ fontSize: "18px", fontWeight: "bold", marginBottom: "10px" }}
-        >
-          Bent u uitvaartverzorger
-        </h2>
-        <p style={{ fontSize: "14px", marginBottom: "1rem" }}>
+      <div className="bg-[#4a4a4a] text-white p-6">
+        <h2 className="font-bold text-xl mb-2">Bent u uitvaartverzorger</h2>
+        <p className="text-base mb-2">
           Check onze pagina met veelgestelde vragen en ontdek hoe u via myFunus
           in contact komt met uw doelgroep
         </p>
-        <button
-          style={{
-            backgroundColor: "#E53935",
-            color: "white",
-            padding: "0.5rem 1rem",
-            borderRadius: "5px",
-            border: "none",
-            cursor: "pointer",
-            fontSize: "14px",
-            fontWeight: "bold",
-          }}
-        >
+        <button className="text-center text-sm block mx-auto px-4 font-bold p-2 bg-primary">
           Naar pagina
         </button>
       </div>
 
       {/* Blijf ook op de hoogte Section */}
-      <div
-        style={{
-          backgroundColor: "#32A899",
-          color: "white",
-          padding: "1.5rem",
-          textAlign: "center",
-          borderRadius: "8px",
-        }}
-      >
-        <h2
-          style={{ fontSize: "18px", fontWeight: "bold", marginBottom: "1rem" }}
-        >
-          Blijf ook op de hoogte
-        </h2>
-        <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
-          <a href="#" style={{ color: "white", fontSize: "24px" }}>
-            <i className="fab fa-facebook"></i>
+      <div className="mt-4 bg-secondary text-white p-6 text-center">
+        <h2 className="font-bold text-xl mb-2">Blijf ook op de hoogte</h2>
+
+        <div className="mt-4 flex justify-center gap-4 items-center">
+          <a
+            href="http://fb.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="size-10 rounded-full bg-white text-black flex items-center justify-center"
+          >
+            <FaFacebookF className="h-7 w-auto" />
           </a>
-          <a href="#" style={{ color: "white", fontSize: "24px" }}>
-            <i className="fab fa-linkedin"></i>
+          <a
+            href="http://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="size-10 rounded-full bg-white text-black flex items-center justify-center"
+          >
+            <FaLinkedinIn className="h-7 w-auto" />
           </a>
-          <a href="#" style={{ color: "white", fontSize: "24px" }}>
-            <i className="fab fa-instagram"></i>
+          <a
+            href="http://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="size-10 rounded-full bg-white text-black flex items-center justify-center"
+          >
+            <FaInstagram className="h-7 w-auto" />
           </a>
         </div>
       </div>
