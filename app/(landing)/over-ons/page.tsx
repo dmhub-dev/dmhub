@@ -51,7 +51,7 @@ const About = () => {
           <div className="border-l-2 border-secondary pl-[15px] pr-2">
             <h2 className="font-bold text-darktext text-2xl mb-4">Missie</h2>
             <p className="text-darktext">
-              De missie van Funus is om consumenten te helpen in de zoektocht
+              De missie van myFunus is om consumenten te helpen in de zoektocht
               naar de uitvaartverzorger die bij hun past op basis van
               persoonlijke voorkeuren. Dit komt ook terug in de slogan van
               Funus: “Vind de uitvaartverzorger die bij u past”.
@@ -62,11 +62,11 @@ const About = () => {
           <div className="border-l-2 border-secondary pl-[15px] pr-2">
             <h2 className="font-bold text-darktext text-2xl mb-4">Visie</h2>
             <p className="text-darktext">
-              Funus wil ervoor zorgen dat consumenten (mogelijke opdrachtgevers)
-              op basis van zo volledig mogelijke informatie een keuze kunnen
-              maken voor een uitvaartverzorger. Het doel is het creëren van een
-              optimale match tussen beiden zodat er een perfecte uitvaart
-              geregeld wordt in de ogen van de klant.
+              myFunus wil ervoor zorgen dat consumenten (mogelijke
+              opdrachtgevers) op basis van zo volledig mogelijke informatie een
+              keuze kunnen maken voor een uitvaartverzorger. Het doel is het
+              creëren van een optimale match tussen beiden zodat er een perfecte
+              uitvaart geregeld wordt in de ogen van de klant.
             </p>
           </div>
 

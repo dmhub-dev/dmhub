@@ -11,14 +11,14 @@ interface InfoPageProps {
 const InfoPage = ({ params }: { params: { slug: string } }) => {
   return (
     <>
-      <Hero />
+      <Hero backgroundImg="/img/zonshorizontal-1024x323.jpg" />
       <section className="container max-w-5xl w-full">
         <div className="bg-white shadow-lg p-10 md:p-16 w-full -mt-20 mb-16">
           <h1 className="text-2xl md:text-4xl font-bold text-secondary mb-6 md:mb-8">
             De kracht van MyFunus
           </h1>
 
-          <article className="prose prose-lg max-w-none pl-4 md:pl-8 border-l-2 border-l-primary">
+          <article className="prose prose-base text-black max-w-none pl-4 md:pl-6 border-l-2 border-l-primary">
             <p>
               Een slecht geregelde uitvaart of een onvolledig afscheid: een
               nachtmerrie voor iedere nabestaande. Een uitvaart vindt maar één
@@ -48,9 +48,9 @@ const InfoPage = ({ params }: { params: { slug: string } }) => {
               verleden gaan behoren.
             </p>
           </article>
-          <article className="prose prose-lg max-w-none pl-4 pt-16 md:pl-8 border-l-2 border-l-primary">
-            <p>Lees ook de voldegen Onderwerpen</p>
-            <ul>
+          <article className="prose prose-base text-black max-w-none pl-4 pt-10 md:pl-6 border-l-2 border-l-primary">
+            <p className="mb-0">Lees ook de voldegen Onderwerpen</p>
+            <ul className="list-none p-0 mt-0">
               {[
                 {
                   title: "Informatie over uitvaarten",
@@ -73,7 +73,7 @@ const InfoPage = ({ params }: { params: { slug: string } }) => {
                   href: "/info/rouw-en-rouwverwerkerking",
                 },
               ].map((link) => (
-                <li key={link.title}>
+                <li key={link.title} className="p-0">
                   <Link
                     href={link.href}
                     className="text-blue-600 hover:text-primary-dark"
