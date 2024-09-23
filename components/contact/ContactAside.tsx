@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
@@ -11,9 +12,11 @@ const ContactAside = () => {
           Check onze pagina met veelgestelde vragen en ontdek hoe u via myFunus
           in contact komt met uw doelgroep
         </p>
-        <button className="text-center text-sm block mx-auto px-4 font-bold p-2 bg-primary">
-          Naar pagina
-        </button>
+        <Link href="/meld-u-aan">
+          <button className="text-center text-sm block mx-auto px-4 font-bold p-2 bg-primary">
+            Naar pagina
+          </button>
+        </Link>
       </div>
 
       {/* Blijf ook op de hoogte Section */}
