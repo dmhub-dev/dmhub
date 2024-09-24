@@ -1,5 +1,5 @@
-import Header from "@/components/layout/Header";
 import React from "react";
+import DashboardHeader from "@/components/layout/DashboardHeader";
 
 export default function layout({
   children,
@@ -8,7 +8,7 @@ export default function layout({
 }>) {
   return (
     <>
-      <Header />
+      <DashboardHeader />
       {children}
     </>
   );
