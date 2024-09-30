@@ -54,7 +54,7 @@ function ContactForm(): React.JSX.Element {
           <option value="consumer">Consument</option>
           <option value="provider">Uitvaartverzorger</option>
         </select>
-        {errors.role && <span className="error-text">Role is required</span>}
+        {errors.role && <span className="error-text">required</span>}
       </div>
       <div className="md:col-span-3">
         <select

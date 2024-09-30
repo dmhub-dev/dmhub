@@ -66,7 +66,12 @@ export default function SearchFilters({ filters }: { filters: any }) {
   return (
     <section>
       <section className="mb-8">
-        <h4 className="font-bold">Specialismen</h4>
+        <h4 className="font-bold flex items-center gap-3">
+          Specialismen{" "}
+          <button className="h-5 w-5 text-white text-xs rounded-full bg-secondary">
+            i
+          </button>
+        </h4>
         <hr className="my-3 w-full" />
         <div>
           <label className="flex items-center mb-3 text-gray-600">
@@ -140,7 +145,12 @@ export default function SearchFilters({ filters }: { filters: any }) {
         </div>
       </section>
       <section className="mb-8">
-        <h4 className="font-bold">Aannametarief</h4>
+        <h4 className="font-bold flex items-center gap-3">
+          Aannametarief{" "}
+          <button className="h-5 w-5 text-white text-xs rounded-full bg-secondary">
+            i
+          </button>
+        </h4>
         <hr className="my-3 w-full" />
         <div className="mt-4">
           <Slider
