@@ -1,53 +1,66 @@
-import { FaEye, FaPiggyBank, FaChartLine, FaClipboardList, FaMedal } from 'react-icons/fa';
+const featuresDefault = [
+  {
+    title: "Zichtbaarheid",
+    description: "Verhoog uw online zichtbaarheid",
+    icon: "/icons/features-1.svg",
+  },
+  {
+    title: "Besparingen",
+    description: "Bespaar tijd en geld aan online marketing",
+    icon: "/icons/features-5.svg",
+  },
+  {
+    title: "Uitvaarten",
+    description:
+      "Word beter gevonden en verhoog uw kans op het verzorgen van meer uitvaarten",
+    icon: "/icons/features-6.svg",
+  },
+  {
+    title: "Inzicht",
+    description:
+      "Krijg inzicht in uw prestaties en de prijzen t.o.v. uw concurrentie en uw online conversie",
+    icon: "/icons/features-4.svg",
+  },
+  {
+    title: "Flexibiliteit",
+    description: "Bepaal zelf uw abonnement met bijkomende voordelen",
+    icon: "/icons/features-2.svg",
+  },
+  {
+    title: "Nieuwe inkomstenbronnen",
+    description: "Nieuwe verdienmodellen zorgen voor extra inkomsten",
+    icon: "/icons/features-3.svg",
+  },
+];
 
-const Benefits = () => {
+const Benefits = ({ benefits = featuresDefault }) => {
   return (
     <section className="py-16">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-12">De voordelen van myFunus</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-          <div className="flex items-start">
-            <FaEye className="text-red-500 text-3xl mr-4" />
-            <div>
-              <h3 className="text-lg font-bold">Zichtbaarheid</h3>
-              <p>Verhoog uw online zichtbaarheid</p>
+      <div className="container w-full">
+        <h2 className="text-3xl font-bold mb-12 text-darktext">
+          De voordelen van myFunus
+        </h2>
+        <div className="w-full grid md:grid-cols-3 gap-6">
+          {benefits.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-4 text-start text-darktext p-2"
+            >
+              <img
+                src={item.icon}
+                alt={item.title}
+                className="h-[40px] w-auto"
+              />
+              <div>
+                <h3 className="text-base font-bold text-darktext leading-[19px] mb-[3px]">
+                  {item.title}
+                </h3>
+                <p className="text-base text-darktext leading-[19px]">
+                  {item.description}
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex items-start">
-            <FaPiggyBank className="text-red-500 text-3xl mr-4" />
-            <div>
-              <h3 className="text-lg font-bold">Besparingen</h3>
-              <p>Bespaar tijd en geld aan online marketing</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <FaClipboardList className="text-red-500 text-3xl mr-4" />
-            <div>
-              <h3 className="text-lg font-bold">Uitvaarten</h3>
-              <p>Word beter gevonden en verhoog uw kans op het verzorgen van meer uitvaarten</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <FaChartLine className="text-red-500 text-3xl mr-4" />
-            <div>
-              <h3 className="text-lg font-bold">Inzicht</h3>
-              <p>Krijg inzicht in uw prestaties en de prijzen t.o.v. uw concurrentie en uw online conversie</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <FaMedal className="text-red-500 text-3xl mr-4" />
-            <div>
-              <h3 className="text-lg font-bold">Flexibiliteit</h3>
-              <p>Bepaal zelf uw abonnement met bijkomende voordelen</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <FaChartLine className="text-red-500 text-3xl mr-4" />
-            <div>
-              <h3 className="text-lg font-bold">Nieuwe inkomstenbronnen</h3>
-              <p>Nieuwe verdienmodellen zorgen voor extra inkomsten</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
