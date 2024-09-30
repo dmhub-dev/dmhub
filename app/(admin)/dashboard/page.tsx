@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Welkom, ProfilePublish } from "@/components/dashboard/Welkom";
-import  ProfileSection from "@/components/dashboard/Profile";
+import  ProfileSection from "@/components/dashboard/ProfileSection";
 import RecentRequests from "@/components/dashboard/Recents";
 import PremiumSection from "@/components/dashboard/Premium";
 import StatisticsSection from "@/components/dashboard/Statistics";
