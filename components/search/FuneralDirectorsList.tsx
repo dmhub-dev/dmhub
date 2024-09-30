@@ -28,6 +28,7 @@ export default async function FuneralDirectorsList({
                 : "",
               rating: 4.5,
               tags: director.specialismen,
+              slug: director.slug,
             }}
           />
         ))}
