@@ -9,6 +9,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { Plus } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 
@@ -44,52 +45,11 @@ export default function FuneralDirectorsPagination({
   }
 
   return (
-    <Pagination className="mt-8">
-      <PaginationContent>
-        <PaginationItem>
-          <PaginationPrevious
-            href={`${pathname}?${createQueryString(
-              "page",
-              currentPage !== 1 ? `${currentPage - 1}` : `${currentPage}`
-            )}`}
-          />
-        </PaginationItem>
-
-        {totalPages !== 1 && (
-          <>
-            {[
-              ...pages.slice(
-                currentPage < 3 ? 0 : currentPage - 2,
-                currentPage + 5
-              ),
-            ].map((page) => (
-              <PaginationItem key={page}>
-                <PaginationLink
-                  href={`${pathname}?${createQueryString(
-                    "page",
-                    page.toString()
-                  )}`}
-                  isActive={page === currentPage}
-                >
-                  {page}
-                </PaginationLink>
-              </PaginationItem>
-            ))}
-          </>
-        )}
-
-        <PaginationItem>
-          <PaginationEllipsis />
-        </PaginationItem>
-
-        <PaginationItem>
-          <PaginationNext
-            href={`${pathname}?${
-              currentPage !== totalPages ? currentPage + 1 : currentPage
-            }`}
-          />
-        </PaginationItem>
-      </PaginationContent>
-    </Pagination>
+    <div className="mt-12 flex justify-center">
+      <button className="text-center">
+        <span className="block text-darktext">Toon meer uitvaartverzorger</span>
+        <Plus className="size-7 text-secondary inline-block" />
+      </button>
+    </div>
   );
 }

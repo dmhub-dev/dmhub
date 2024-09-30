@@ -64,7 +64,8 @@ const FuneralDirectorCard = ({
       </p>
       <div className="bg-secondary p-2 text-center">
         <span className="font-bold text-base text-white">
-          Zwolle {director.distance ? `${director.distance} km` : ""}
+          {director.address}{" "}
+          {director.distance ? `${director.distance} km` : ""}
         </span>
       </div>
     </div>
