@@ -19,7 +19,7 @@ function ProfileSidebar({
   setActiveSection: (section: string) => void;
 }) {
   return (
-    <div className="w-1/4 bg-white p-4 border-r h-[100vh] overflow-auto flex flex-col justify-evenly ">
+    <div className="w-1/4 bg-white p-4 border-r h-[100vh] overflow-auto flex flex-col justify-evenly relative ">
       <div className="space-y-4">
         {/* Personal profile section */}
         <div>

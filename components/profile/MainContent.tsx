@@ -18,7 +18,7 @@ type MainContentProps = {
 
 function MainContent({ activeSection }: MainContentProps) {
   return (
-    <div className="w-3/4 bg-gray-100 px-6 py-2 overflow-hidden h-screen">
+    <div className="w-3/4 bg-gray-100 justify-center align-middle px-6 py-2 overflow-y-scroll m-h-screen">
       {activeSection === 'personalInfo' && <PersonalInfo />}
       {activeSection === 'password' && <PasswordChange />}
       {activeSection === 'companyProfile' && <CompanyProfile />}
