@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // components/MediaUpload.tsx
 import { useState } from "react";
 
@@ -89,7 +90,7 @@ const Media = () => {
 
       {/* Photos */}
       <div className="mb-6">
-        <label className="block text-sm font-medium mb-2">Foto's</label>
+        <label className="block text-sm font-medium mb-2">Fotos</label>
         <input
           type="file"
           accept="image/*"
@@ -120,7 +121,7 @@ const Media = () => {
 
       {/* Videos */}
       <div>
-        <label className="block text-sm font-medium mb-2">Video's</label>
+        <label className="block text-sm font-medium mb-2">Videos</label>
         <input
           type="file"
           accept="video/*"

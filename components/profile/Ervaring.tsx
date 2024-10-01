@@ -9,11 +9,9 @@ export default function Ervaring() {
   const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(Number(event.target.value));
   };
-  // Add a new voordeel (advantage)
   const addVoordeel = () => {
     setVoordelen([...voordelen, '']);
   };
-
   // Handle input change for voordeel fields
   const handleVoordeelChange = (index: number, value: string) => {
     const updatedVoordelen = [...voordelen];
@@ -33,8 +31,6 @@ export default function Ervaring() {
     <div className="max-w-2xl ">
       {/* Title */}
       <h1 className="text-2xl font-bold mb-4">Ervaring</h1>
-
-      {/* Reason Section */}
       <section>
         <h2 className="text-blue-900 font-bold">Ervaring als uitvaartverzorger</h2>
         <p className="text-gray-700 mt-2">
@@ -42,7 +38,6 @@ export default function Ervaring() {
             een extra ervaring toevoegen.         
         </p>
         
-        {/* Input Fields Section */}
         <div className="mt-4 space-y-3">
           {voordelen.map((voordeel, index) => (
             <div key={index} className="flex items-center space-x-3">
@@ -120,7 +115,6 @@ export default function Ervaring() {
       </div>
       </section>
 
-      {/* Save Button */}
       <div className="mt-6 fixed bottom-4 ">
         <button className="bg-[#2b998a] hover:bg-[#2b997a] text-white font-bold py-2 px-4 rounded">
           OPSLAAN

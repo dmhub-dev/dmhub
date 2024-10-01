@@ -28,7 +28,6 @@ function PasswordChange() {
           </ul>
           
           <button className="bg-[#2b998a] text-white px-4 py-2 mt-6 rounded text-[12px] "                 
-          // onClick={() => setActiveSection('password')}
           >OPSALAAN</button>     
          </form>
       </div>

@@ -8,7 +8,6 @@ export default function Voordelen() {
     setVoordelen([...voordelen, '']);
   };
 
-  // Handle input change for voordeel fields
   const handleVoordeelChange = (index: number, value: string) => {
     const updatedVoordelen = [...voordelen];
     updatedVoordelen[index] = value;
@@ -28,7 +27,6 @@ export default function Voordelen() {
       {/* Title */}
       <h1 className="text-2xl font-bold mb-4">Voordelen</h1>
 
-      {/* Reason Section */}
       <section>
         <h2 className="text-blue-900 font-bold">Reden om voor u als uitvaartverzorger te kiezen</h2>
         <p className="text-gray-700 mt-2">

@@ -1,6 +1,4 @@
-
-
-// components/BadgeSelection.tsx
+/* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 
 const badges = [

@@ -1,6 +1,5 @@
 import React from "react";
 
-// Personal Info Component
 function PersonalInfo() {
     return (
       <div>
@@ -53,7 +52,6 @@ function PersonalInfo() {
           </div>
           
           <button className="bg-[#2b998a] text-white px-4 py-2 mt-6 rounded text-[12px] "                 
-          // onClick={() => setActiveSection('password')}
           >OPSLAAN</button>
         </form>
       </div>

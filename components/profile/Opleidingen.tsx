@@ -8,7 +8,6 @@ export default function Opleidingen() {
     setVoordelen([...voordelen, '']);
   };
 
-  // Handle input change for voordeel fields
   const handleVoordeelChange = (index: number, value: string) => {
     const updatedVoordelen = [...voordelen];
     updatedVoordelen[index] = value;
@@ -28,7 +27,6 @@ export default function Opleidingen() {
       {/* Title */}
       <h1 className="text-2xl font-bold mb-4">Opleiding en certificaten</h1>
 
-      {/* Reason Section */}
       <section>
         <h2 className="text-blue-900 font-bold">Opleidingen en certificaten binnen de uitvaartbranche</h2>
         <p className="text-gray-700 mt-2">
@@ -36,7 +34,6 @@ export default function Opleidingen() {
             uitvaartbranche. U kunt elke keer een extra opleiding of certificaat toevoegen.        
         </p>
 
-        {/* Input Fields Section */}
         <div className="mt-4 space-y-3">
           {voordelen.map((voordeel, index) => (
             <div key={index} className="flex items-center space-x-3">

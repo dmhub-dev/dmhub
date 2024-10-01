@@ -6,7 +6,6 @@ type DropdownState = {
   finance: boolean;
 };
 
-// Sidebar Component
 function ProfileSidebar({
   dropdownOpen,
   handleDropdown,
