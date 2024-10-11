@@ -2,15 +2,15 @@
 title: Goed voorbereid zijn tijdens het regelen van de uitvaart
 links:
   - title: Lees ook de volgende onderwerpen
-    slug: /
+    slug: /info/over-uitvaarten
   - title: Informatie over uitvaarten
-    slug: /
+    slug: /info/over-uitvaarten
   - title: Een komend overlijden
-    slug: /
+    slug: /info/komend-overlijden
   - title: Wat doet een uitvaartverzorger
-    slug: /
+    slug: /info/wat-doet-een-uitvartverzorger
   - title: Rouw en rouwverwerking
-    slug: /
+    slug: /info/rouw-en-rouwverwerkerking
 ---
 
 **Een uitvaart regelen**  

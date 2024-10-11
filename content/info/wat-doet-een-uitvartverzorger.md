@@ -2,15 +2,15 @@
 title: Wat doet een uitvaartverzorger
 links:
   - title: Lees ook de volgende onderwerpen
-    slug: /
+    slug: /info/over-uitvaarten
   - title: Informatie over uitvaarten
-    slug: /
+    slug: /info/over-uitvaarten
   - title: Een komend overlijden
-    slug: /
+    slug: /info/komend-overlijden
   - title: Wat doet een uitvaartverzorger
-    slug: /
+    slug: /info/wat-doet-een-uitvartverzorger
   - title: Een uitvaart regelen
-    slug: /
+    slug: /info/een-uitvaart-regelen
 ---
 
 Wanneer u te maken krijgt met een overlijden in uw omgeving, kunt u via myFunus contact opnemen met een uitvaartverzorger die aan uw behoeftes voldoet. Hieronder geven wij aan wat een uitvaartverzorger voor u in geval van overlijden kan betekenen.

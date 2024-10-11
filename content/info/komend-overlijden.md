@@ -2,15 +2,15 @@
 title: Een komend overlijden
 links:
   - title: Lees ook de volgende onderwerpen
-    slug: /
+    slug: /info/over-uitvaarten
   - title: Informatie over uitvaarten
-    slug: /
+    slug: /info/over-uitvaarten
   - title: Wat doet een uitvaartverzorger
-    slug: /
+    slug: /info/wat-doet-een-uitvartverzorger
   - title: Een uitvaart regelen
-    slug: /
+    slug: /info/een-uitvaart-regelen
   - title: Rouw en rouwverwerking
-    slug: /
+    slug: /info/rouw-en-rouwverwerkerking
 ---
 
 # Goed voorbereid zijn op een komend overlijden

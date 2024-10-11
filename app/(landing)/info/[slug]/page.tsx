@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "@/components/layout/Hero";
 import Link from "next/link";
+import Markdown from "react-markdown";
 import { getListOfInfoPages, getPostContent } from "@/lib/infoContentHelpers";
 
 export const generateStaticParams = async () => {
@@ -22,7 +23,6 @@ export interface InfoPageProps {
 
 const InfoPage = ({ params }: { params: { slug: string } }) => {
   const content = getPostContent(params.slug);
-  console.log(content);
 
   return (
     <>
@@ -34,7 +34,7 @@ const InfoPage = ({ params }: { params: { slug: string } }) => {
           </h1>
 
           <article className="prose prose-base text-black max-w-none pl-4 md:pl-6 border-l-2 border-l-primary">
-            {content.content}
+            <Markdown>{content.content}</Markdown>
           </article>
           <article className="prose prose-base text-black max-w-none pl-4 pt-10 md:pl-6 border-l-2 border-l-primary">
             <p className="mb-0">Lees ook de voldegen Onderwerpen</p>
