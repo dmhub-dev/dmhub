@@ -26,7 +26,7 @@ const FuneralDirectorCard = ({
 }) => {
   return (
     <div className="bg-white shadow-custom z-10  flex flex-col">
-      <div className="bg-[#96ccc5] w-full h-[80px]"></div>
+      <div className="bg-[#96ccc5] w-full h-[70px]"></div>
       <img
         src={director?.image?.url || "/img/person.png"}
         alt={director.naam}
@@ -34,7 +34,7 @@ const FuneralDirectorCard = ({
       />
       <div className="p-2 flex-grow">
         <div className="w-full flex justify-end">
-          <div className="size-9 rounded-full flex items-center justify-center text-white bg-secondary text-sm -mt-10">
+          <div className="size-8 rounded-full flex items-center justify-center text-white bg-secondary text-xs font-bold -mt-10">
             {director.rating || "4.5"}
           </div>
         </div>
@@ -52,17 +52,17 @@ const FuneralDirectorCard = ({
             director?.tags.map((i) => (
               <button
                 key={i.id}
-                className="p-1 px-2 border-[1.5px] text-xs rounded-full border-secondary"
+                className="p-1 px-2 border-[1.5px] text-[11px] rounded-full border-secondary"
               >
                 {i.name}
               </button>
             ))}
         </div>
       </div>
-      <p className="mt-1 mb-2 text-center text-sm text-secondary">
+      <p className="mt-1 mb-1.5 text-center text-sm text-secondary">
         <b>Aannametarief:</b> {director.price_range || "Onbekend"}
       </p>
-      <div className="bg-secondary p-2 text-center">
+      <div className="bg-secondary p-1.5 text-center">
         <span className="font-bold text-base text-white">
           {director.address}{" "}
           {director.distance ? `${director.distance} km` : ""}
