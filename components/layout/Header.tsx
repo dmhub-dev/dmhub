@@ -40,7 +40,7 @@ const uitvaartverzorgerLinks = [
         title: "Veelgestelde vragen",
         href: "/veelgestelde-vragen?ql=uitvartverzorger",
       },
-      { title: "Contact", href: "/contact?userType=uitvartverzorger" },
+      { title: "Contact", href: "/contact?userType=uitvaartverzorger" },
     ],
   },
   {

@@ -64,7 +64,7 @@ const FuneralDirectorCard = ({
       </p>
       <div className="bg-secondary p-1.5 text-center">
         <span className="font-bold text-base text-white">
-          {director.address}{" "}
+          {director.address || "Amsterdam"}{" "}
           {director.distance ? `${director.distance} km` : ""}
         </span>
       </div>
