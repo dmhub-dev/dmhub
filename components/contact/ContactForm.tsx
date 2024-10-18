@@ -1,21 +1,66 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Select } from "../ui/select";
 
-function ContactForm(): React.JSX.Element {
+const directorOptions = [
+  "Vraag over myFunus",
+  "Probleem met aanmelden",
+  "Klacht nav aanvraag",
+  "Ik wil op een andere manier samenwerken",
+  "Overige",
+];
+
+const consumerOptions = [
+  "Vraag over myFunus",
+  "Probleem met aanvraag",
+  "Klacht nav aanvraag",
+  "Ik heb een andere vraag",
+];
+
+function ContactForm({
+  target = "consument",
+}: {
+  target: string;
+}): React.JSX.Element {
+  const [subjectOptions, setSubjectOptions] = useState<string[]>([]);
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+    getValues,
+    setValue,
+  } = useForm({
+    defaultValues: {
+      voornaam: "",
+      achternaam: "",
+      role: target,
+      subject: "",
+      message: "",
+      email: "",
+    },
+  });
 
   const onSubmit = (data: any) => {
     console.log(data);
   };
+
+  useEffect(() => {
+    setValue("role", target);
+
+    return () => {};
+  }, [target]);
+
+  useEffect(() => {
+    setSubjectOptions(
+      getValues("role") === "consument" ? consumerOptions : directorOptions
+    );
+
+    return () => {};
+  }, []);
 
   return (
     <form
@@ -30,7 +75,7 @@ function ContactForm(): React.JSX.Element {
           {...register("voornaam", { required: true })}
         />
         {errors.voornaam && (
-          <span className="error-text">Voornaam is required</span>
+          <span className="text-red-500 text-sm">Voornaam is required</span>
         )}
       </div>
       <div className="form-group md:col-span-2">
@@ -40,7 +85,7 @@ function ContactForm(): React.JSX.Element {
           {...register("achternaam", { required: true })}
         />
         {errors.achternaam && (
-          <span className="error-text">Achternaam is required</span>
+          <span className="text-red-500 text-sm">Achternaam is required</span>
         )}
       </div>
 
@@ -51,10 +96,10 @@ function ContactForm(): React.JSX.Element {
           {...register("role", { required: true })}
         >
           <option value="">Ik ben een...</option>
-          <option value="consumer">Consument</option>
-          <option value="provider">Uitvaartverzorger</option>
+          <option value="consument">Consument</option>
+          <option value="uitvaartverzorger">Uitvaartverzorger</option>
         </select>
-        {errors.role && <span className="error-text">required</span>}
+        {errors.role && <span className="text-red-500 text-sm">required</span>}
       </div>
       <div className="md:col-span-3">
         <select
@@ -62,11 +107,14 @@ function ContactForm(): React.JSX.Element {
           className="border p-2.5 rounded-none w-full pr-4"
         >
           <option value="">Onderwerp...</option>
-          <option value="vraag">Vraag</option>
-          <option value="suggestie">Suggestie</option>
+          {subjectOptions.map((i) => (
+            <option value={i} key={i}>
+              {i}
+            </option>
+          ))}
         </select>
         {errors.subject && (
-          <span className="error-text">Subject is required</span>
+          <span className="text-red-500 text-sm">Subject is required</span>
         )}
       </div>
 
@@ -74,11 +122,11 @@ function ContactForm(): React.JSX.Element {
       <div className="md:col-span-6">
         <textarea
           placeholder="Vraag"
-          {...register("question", { required: true })}
+          {...register("message", { required: true })}
           className="input-class w-full h-24 border rounded-none px-2 py-1"
         />
-        {errors.question && (
-          <span className="error-text">Vraag is required</span>
+        {errors.message && (
+          <span className="text-red-500 text-sm">Vraag is required</span>
         )}
       </div>
 
@@ -89,7 +137,9 @@ function ContactForm(): React.JSX.Element {
           placeholder="Email"
           {...register("email", { required: true })}
         />
-        {errors.email && <span className="error-text">Email is required</span>}
+        {errors.email && (
+          <span className="text-red-500 text-sm">Email is required</span>
+        )}
       </div>
 
       {/* Submit Button */}
