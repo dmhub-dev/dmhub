@@ -26,7 +26,7 @@ export default function Testimonials({
               className="grid grid-cols-[1fr_200px] w-full gap-10 text-darktext "
             >
               <div className="w-full">
-                <p className="text-lg italic mb-6">"{i.quote}"</p>
+                <p className="text-lg italic mb-6">&quot;{i.quote}&quot;</p>
                 <b className="text-lg font-bold block">{i.name}</b>
                 <span className="text-lg">{i.job_title}</span>
               </div>
