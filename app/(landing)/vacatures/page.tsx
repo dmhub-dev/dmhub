@@ -4,7 +4,7 @@ import VacanciesList from "@/components/werken-bij/VacanciesList";
 import WorkBenefits from "@/components/werken-bij/WorkBenefits";
 import React from "react";
 
-export default function samenwerken() {
+export default function VacaturesPage() {
   return (
     <>
       <Hero
@@ -50,7 +50,16 @@ openstaande vacatures."
           },
         ]}
       />
-      <VacanciesList />
+      <VacanciesList
+        vacancies={[
+          {
+            title: "Account Manager Nederland",
+            location: "Deventer",
+            vacancyType: "Fulltime",
+            id: "1",
+          },
+        ]}
+      />
     </>
   );
 }

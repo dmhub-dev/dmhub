@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Button } from "../ui/button";
 
@@ -21,7 +23,18 @@ export default function Hero({
             ))}
           </div>
           <div className="text-center">
-            <Button className="p-6 font-bold">BEKIJK ONZE VACATURES</Button>
+            <Button
+              className="p-6 font-bold"
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  const vacanciesEl = document.getElementById("vacancies-list");
+
+                  vacanciesEl?.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              BEKIJK ONZE VACATURES
+            </Button>
           </div>
         </div>
         {/* Images */}
