@@ -1,5 +1,5 @@
 ---
-title: Goed voorbereid zijn op de fase na de uitvaart
+title: Rouw en rouwverwerking
 links:
   - title: Lees ook de volgende onderwerpen
     slug: /info/over-uitvaarten
@@ -13,7 +13,7 @@ links:
     slug: /info/een-uitvaart-regelen
 ---
 
-**Rouw en rouwverwerking**  
+**Goed voorbereid zijn op de fase na de uitvaart**  
 Na de uitvaart zijn er enkele zaken die afgehandeld moeten worden. Het is vaak onduidelijk waar je precies moet beginnen, en het lijkt erop dat er veel bij komt kijken. In dit overzicht vind je de 9 stappen die doorlopen kunnen worden in de periode na de uitvaart. Iedere stap is voorzien van uitgebreide en duidelijke informatie die je kan helpen tijdens deze periode van afhandeling, rouw en rouwverwerking.
 
 **Waarom heeft myFunus deze stappen in kaart gebracht?**  
