@@ -3,7 +3,13 @@ import Hero from "@/components/layout/Hero";
 import ContactForm from "@/components/contact/ContactForm";
 import ContactAside from "@/components/contact/ContactAside";
 
-const Contact = () => {
+const Contact = ({
+  searchParams,
+}: {
+  searchParams?: { [key: string]: string | undefined };
+}) => {
+  const role = searchParams?.userType || "consument";
+
   return (
     <>
       <Hero backgroundImg="/img/contact.jpg" />
@@ -21,7 +27,7 @@ const Contact = () => {
               prijs!
             </p>
 
-            <ContactForm />
+            <ContactForm target={role} />
           </div>
 
           <div className="w-full">

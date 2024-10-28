@@ -6,6 +6,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { getFAQsContent } from "@/lib/getFAQs";
+import Markdown from "react-markdown";
 
 interface FAQItem {
   question: string;
@@ -14,12 +16,12 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "Welke uitvaartverzorger staan er op myFunus?",
+    question: "Welke uitvaartverzorgers staan er allemaal op myFunus?",
     answer:
-      "Álle uitvaartverzorgers van Nederland staan op Funus, tenzij de uitvaartverzorgers niet online zichtbaar zijn of hebben aangegevenliever niet op Funus zichtbaar te zijn.",
+      "Op myFunus worden alle uitvaartverzorgers van Nederland weergegeven, die staan ingeschreven bij de Kamer van Koophandel. ",
   },
   {
-    question: "Hoe kan ik een uit vaartverzorger vinden?",
+    question: "Hoe kies ik een betrouwbare uitvaartverzorger?",
     answer:
       'Vul op de homepagina uw plaatsnaam of postcode in en druk op "zoek uw uitvaartverzorger". Nu worden alle uitvaartverzorgers getoond die werkzaam zijn in de opgegeven plaatsnaam of postcode. U kunt de uitvaartverzorgers rangschikken op basis van kwaliteit, prijs of afstand. Ook kunt u filters toepassen op onder andere geslacht, specialismes en competenties. Klik op een uitvaartverzorger en kom er op de persoonlijke profielpagina achter of dit de uitvaartverzorger is die bij u past.',
   },
@@ -41,6 +43,8 @@ const faqs: FAQItem[] = [
 ];
 
 export default function FAQs() {
+  const faqsData = getFAQsContent("consumer");
+
   return (
     <>
       <Hero />
@@ -49,15 +53,26 @@ export default function FAQs() {
           <h1 className="text-2xl md:text-4xl font-bold text-secondary mb-2">
             Vragen & Antwoorden
           </h1>
-          <p className="text-gray-600 mb-8">Wij willen u graag helpen.</p>
+          <article className="text-gray-600 mb-8">
+            <p className="mb-2">
+              Heeft u vragen over uitvaartverzorgers, bent u benieuwd naar wat
+              zij precies doen of wat myFunus voor u kan betekenen rondom een
+              overlijden? Wij staan voor u klaar om u te helpen.
+            </p>
+            <p>Hieronder vindt u de antwoorden op de meestgestelde vragen.</p>
+          </article>
 
           <Accordion type="single" collapsible>
-            {faqs.map((faq, index) => (
-              <AccordionItem value={`item-${index}`} key={faq.question}>
-                <AccordionTrigger>{faq.question}</AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
+            {faqsData.map(
+              (faq: { question: string; answer: string }, index: number) => (
+                <AccordionItem value={`item-${index}`} key={faq.question}>
+                  <AccordionTrigger>{faq.question}</AccordionTrigger>
+                  <AccordionContent className="prose prose-sm max-w-none">
+                    <Markdown>{faq.answer}</Markdown>
+                  </AccordionContent>
+                </AccordionItem>
+              )
+            )}
           </Accordion>
         </div>
       </section>
