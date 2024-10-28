@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
-
 import { getVerzorger } from "@/lib/strapi";
 import React from "react";
 import DetailsPageWrapper from "@/components/funeral-details/DetailsPageWrapper";
