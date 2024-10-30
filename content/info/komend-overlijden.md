@@ -13,9 +13,7 @@ links:
     slug: /info/rouw-en-rouwverwerkerking
 ---
 
-# Goed voorbereid zijn op een komend overlijden
-
-**Een komend overlijden**  
+**Goed voorbereid zijn op een komend overlijden**  
 Bij het voorbereiden op een komend overlijden kunnen er enkele zaken vooraf worden geregeld. Het is vaak onduidelijk waar je precies moet beginnen, en het lijkt erop dat er veel bij komt kijken. In dit overzicht vind je de 9 stappen die doorlopen kunnen worden tijdens het regelen van een komend overlijden. Iedere stap is voorzien van uitgebreide en duidelijke informatie die je kan helpen om vooraf alles goed te regelen voor je nabestaanden.
 
 **Waarom heeft myFunus deze stappen in kaart gebracht?**  

@@ -1,5 +1,5 @@
 ---
-title: Goed voorbereid zijn tijdens het regelen van de uitvaart
+title: Een uitvaart regelen
 links:
   - title: Lees ook de volgende onderwerpen
     slug: /info/over-uitvaarten
@@ -13,7 +13,7 @@ links:
     slug: /info/rouw-en-rouwverwerkerking
 ---
 
-**Een uitvaart regelen**  
+**Goed voorbereid zijn tijdens het regelen van de uitvaart**  
 Tijdens het regelen van de uitvaart zijn er belangrijke zaken die geregeld moeten worden. Het is vaak onduidelijk waar je precies moet beginnen, en het lijkt erop dat er veel bij komt kijken. In dit overzicht vind je de 9 stappen die doorlopen moeten worden tijdens het regelen van de uitvaart. Iedere stap is voorzien van uitgebreide en duidelijke informatie die je kan helpen tijdens het regelen van de uitvaart.
 
 **Waarom heeft myFunus deze stappen in kaart gebracht?**  
