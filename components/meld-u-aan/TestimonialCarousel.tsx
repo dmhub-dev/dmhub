@@ -27,7 +27,7 @@ const TestimonialCarousel: React.FC<TestimonialCarouselProps> = ({ testimonials 
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <div className="relative w-full  p-20 bg-secondary  flex items-center justify-between h-[250px]">
+    <div className="relative w-full  p-20 bg-secondary bg-opacity-30  flex items-center justify-between h-[250px]">
       
       {/* Left Arrow */}
       <button

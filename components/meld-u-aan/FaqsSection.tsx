@@ -1,4 +1,3 @@
-import Hero from "@/components/layout/Hero";
 import React from "react";
 import {
   Accordion,
@@ -6,7 +5,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { getFAQsContent } from "@/lib/getFAQs";
 import Markdown from "react-markdown";
 
 interface FAQItem {
@@ -44,7 +42,7 @@ export default function FaqsSection() {
   return (
     <>
       <section className=" w-full flex justify-center align-center flex-col mb-8">
-          <div className="text-center bg-secondary py-8">
+          <div className="text-center bg-secondary bg-opacity-30 py-8">
             <h1 className="text-2xl font-bold text-dark text-center mb-2">
               Heeft u nog vragen? <br/>Wij helpen u graag verder
             </h1>
