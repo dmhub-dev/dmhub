@@ -18,16 +18,9 @@ export default function SearchCompanies() {
       >
         Staat uw bedrijf niet in de lijst?
       </Link>
-      <Button className="h-12 mb-6 uppercase font-semibold">
-        Meld u direct aan
+      <Button className="h-12 w-1/3 mb-6 uppercase font-semibold">
+      Start gratis
       </Button>
-      <p>
-        Heeft u vragen? Neem direct{" "}
-        <Link className="text-secondary underline" href="/contact">
-          contact
-        </Link>{" "}
-        met ons op
-      </p>
     </form>
   );
 }
