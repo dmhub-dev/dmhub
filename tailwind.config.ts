@@ -9,9 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#3590F3",
       },
+    },
+    container: {
+      center: true,
+      padding: "1rem",
+    },
+    fontFamily: {
+      sans: ["Poppins", "sans-serif"],
+      condensed: ["'Roboto Condensed'", "sans-serif"],
     },
   },
   plugins: [],
