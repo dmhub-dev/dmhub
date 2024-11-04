@@ -5,9 +5,9 @@ const quickLinks = [
   { title: "Over myFunus", href: "/over-ons" },
   { title: "Werken bij myFunus", href: "/vacatures" },
   { title: "Contact", href: "/contact" },
-  { title: "Voorwaarden", href: "/voorwaarden" },
-  { title: "Privacy", href: "/privacy" },
-  { title: "Cookies", href: "/privacy" },
+  { title: "Voorwaarden", href: "/info/algemene" },
+  { title: "Privacy", href: "/info/privacy" },
+  { title: "Cookies", href: "/info/cookies" },
 ];
 
 const plaasten = [

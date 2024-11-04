@@ -81,8 +81,8 @@ propositie voor kunnen opzetten."
       </div>
       <Hero backgroundImg="/img/contact.jpg" />
       <section className="container w-full">
-        <div className="w-full grid md:grid-cols-[1fr_320px] gap-6 py-6">
-          <div className="w-full -mt-32 bg-white md:p-16 shadow-xl border">
+        <div className="w-full ml-10 grid md:grid-cols-[1fr_320px] gap-6 py-6">
+          <div className="w-full -mt-32 bg-white md:p-16 shadow-xl border ">
             <h1 className="text-[40px] font-bold text-teal-600 font-sans">
             Samenwerken
             </h1>
