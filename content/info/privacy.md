@@ -7,7 +7,6 @@ links:
     slug: "/info/cookies"
 ---
 
-## Privacy Statement
 Als u de website www.myfunus.com bezoekt (hierna te noemen Website) of uw gegevens deelt met een uitvaartverzorger of andere partner (hierna te noemen Partner) dan verwerken wij gegevens van u. Wij streven ernaar de privacy van onze gebruikers en onze Partners te beschermen. Daarom gaan we zorgvuldig met uw gegevens om en zorgen we er voor dat uw gegevens veilig bij ons zijn. Hoe we dat doen hebben we in deze privacy verklaring voor u op een rij gezet. In onze privacy verklaring kunt u lezen welke gegevens we van u verwerken, wat we er mee doen en welke keuzes u daarin kunt maken.
 
 ## Gegevensverwerking

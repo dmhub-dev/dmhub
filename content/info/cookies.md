@@ -83,4 +83,4 @@ Hieronder vind u terug hoe u cookies van uw browser kunt verwijderen:
 - Internet Explorer: hoe u reeds geplaatste cookies kunt verwijderen en hoe u nieuwe cookies kunt weigeren staat hier beschreven. 
 - Opera: Hoe u reeds geplaatste cookies kunt verwijderen en hoe u nieuwe cookies kunt weigeren staat hier beschreven.
 
-*Deze pagina is het laatst gewijzigd op 3 juli februari 2024.*
+Deze pagina is het laatst gewijzigd op 3 juli februari 2024.
