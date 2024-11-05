@@ -1,8 +1,13 @@
-// @ts-nocheck
 "use client";
 
 import { useEffect, useRef } from "react";
 import Script from "next/script";
+
+declare global {
+  interface Window {
+    VANTA: any;
+  }
+}
 
 export default function HeroBg() {
   const vantaRef = useRef(null);
@@ -44,7 +49,7 @@ export default function HeroBg() {
       <div
         ref={vantaRef}
         style={{ width: "100%", height: "calc(100vh - 100px)" }}
-        id="your-element-selector"
+        id="hero-bg-el"
       ></div>
     </>
   );

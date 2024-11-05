@@ -3,6 +3,7 @@ import React from "react";
 import DropdownLink from "../widgets/DropdownLink";
 import { companyLinks, industryLinks, servicesLinks } from "./constants";
 import { ChevronDown } from "lucide-react";
+import Logo from "../widgets/Logo";
 
 export type LinkItem = {
   title: string;
@@ -14,9 +15,9 @@ export default function Header() {
     <header className="w-full bg-white h-[100px] flex items-center">
       <div className="container w-full flex justify-between items-center">
         <Link href="/" className="text-2xl uppercase">
-          DM Hub
+          <Logo className="h-14 w-auto text-primary" />
         </Link>
-        <div className="flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-2">
           <DropdownLink
             title="Services"
             link="/services"

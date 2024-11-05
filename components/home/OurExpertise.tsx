@@ -10,13 +10,15 @@ export default function OurExpertise() {
     <section className="w-full py-16">
       <h2 className="text-4xl font-bold text-center mb-12">Our Expertise</h2>
 
-      <div className="container max-w-5xl mx-auto flex justify-between mb-12">
+      <div className="container max-w-5xl mx-auto flex flex-wrap justify-between mb-12">
         {options.map((i) => (
           <button
             onClick={() => setActiveTab(i)}
             key={i}
-            className={`p-2 px-6 font-semibold text-xl border-b-2 border-transparent ${
-              activeTab === i ? "text-primary border-primary" : "text-gray-600"
+            className={`p-2 px-6 mt-4 font-semibold md:text-xl border-b-2  ${
+              activeTab === i
+                ? "text-primary border-primary"
+                : "text-gray-600 border-transparent"
             }`}
           >
             {i}
