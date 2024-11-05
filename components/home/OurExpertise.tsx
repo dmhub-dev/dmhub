@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { backendStacks, frontendStacks, TeckStackItem } from "./constants";
 
 const options = ["Frontend", "Backend", "CMS", "E-Commerce", "Cloud"];
 
@@ -25,6 +26,21 @@ export default function OurExpertise() {
           </button>
         ))}
       </div>
+
+      <div className="mb-12 max-w-5xl mx-auto container">
+        {activeTab === "Frontend" && <TechStackList stacks={frontendStacks} />}
+        {activeTab === "Backend" && <TechStackList stacks={backendStacks} />}
+      </div>
     </section>
   );
 }
+
+const TechStackList = ({ stacks }: { stacks: TeckStackItem[] }) => {
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      {stacks.map((i) => (
+        <img src={i.img} alt={i.title} />
+      ))}
+    </div>
+  );
+};
