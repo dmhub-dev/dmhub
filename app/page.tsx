@@ -7,11 +7,9 @@ import MainCTA from "@/components/widgets/MainCTA";
 export default function Home() {
   return (
     <main>
-      <Header />
       <Hero />
       <OurExpertise />
       <MainCTA />
-      <Footer />
     </main>
   );
 }

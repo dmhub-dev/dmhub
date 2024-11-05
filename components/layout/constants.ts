@@ -79,3 +79,14 @@ export const footerLinks = [
     link: "/privacy",
   },
 ];
+
+export const vacanciesLinks = [
+  {
+    title: "Open Positions",
+    link: "/vacancies",
+  },
+  {
+    title: "Working at DM",
+    link: "/about-us/working-at-dmhub",
+  },
+];

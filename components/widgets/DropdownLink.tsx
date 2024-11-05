@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import { LinkItem } from "../layout/Header";
+import { usePathname } from "next/navigation";
+import { includes } from "lodash";
 
 export default function DropdownLink({
   links,
@@ -11,11 +15,15 @@ export default function DropdownLink({
   title: string;
   link: string;
 }) {
+  const pathName = usePathname();
+
   return (
     <div className="group">
       <Link
         href={link}
-        className="uppercase text-base h-[100px] flex items-center px-3 group-hover:text-primary"
+        className={`uppercase text-base h-[100px] flex items-center px-3 group-hover:text-primary ${
+          includes(pathName, link) ? "text-primary" : ""
+        }`}
       >
         {title}
       </Link>
@@ -26,7 +34,9 @@ export default function DropdownLink({
             {links.map((i) => (
               <li
                 key={i.title}
-                className="block py-4 px-6 border-l hover:text-primary hover:border-primary"
+                className={`block py-4 px-6 border-l hover:text-primary hover:border-primary ${
+                  pathName === i.link ? "text-primary border-primary" : ""
+                }`}
               >
                 <Link href={i.link}>{i.title}</Link>
               </li>

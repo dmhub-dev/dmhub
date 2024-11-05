@@ -4,6 +4,7 @@ import DropdownLink from "../widgets/DropdownLink";
 import { companyLinks, industryLinks, servicesLinks } from "./constants";
 import { ChevronDown } from "lucide-react";
 import Logo from "../widgets/Logo";
+import CustomLink from "./CustomLink";
 
 export type LinkItem = {
   title: string;
@@ -28,12 +29,7 @@ export default function Header() {
             link="/industries"
             links={industryLinks}
           />
-          <Link
-            href="/blog"
-            className="uppercase text-base h-[100px] flex items-center px-3 hover:text-primary"
-          >
-            Insights
-          </Link>
+          <CustomLink href="/blog" title="Insights" />
           <DropdownLink title="Company" link="/about-us" links={companyLinks} />
           <div>
             <button className="px-4 flex items-center rounded bg-primary text-white uppercase">

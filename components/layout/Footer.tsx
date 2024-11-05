@@ -1,6 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import { companyLinks, footerLinks, servicesLinks } from "./constants";
+import {
+  companyLinks,
+  footerLinks,
+  servicesLinks,
+  vacanciesLinks,
+} from "./constants";
 import { robotoCondensed } from "@/lib/fonts";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Logo from "../widgets/Logo";
@@ -57,11 +62,27 @@ export default function Footer() {
 
         {/* Footer Column 2 */}
         <div>
-          <div className="mb-6">
+          <div className="mb-8">
             <h4 className="text-white mb-5">Company</h4>
 
             <ul>
               {companyLinks.map((i) => (
+                <li key={i.title}>
+                  <Link
+                    href={i.link}
+                    className="flex items-center gap-3 text-white/70 hover:text-white mb-4"
+                  >
+                    {i.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mb-8">
+            <h4 className="text-white mb-5">Vacancies</h4>
+
+            <ul>
+              {vacanciesLinks.map((i) => (
                 <li key={i.title}>
                   <Link
                     href={i.link}
