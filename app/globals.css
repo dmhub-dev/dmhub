@@ -74,3 +74,15 @@
 .scroll-hidden::-webkit-scrollbar {
   display: none;
 }
+
+
+/* Custom styles (if needed) */
+.step-circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.progress-line {
+  transition: width 0.3s ease;
+}
