@@ -39,7 +39,7 @@ const TechStackList = ({ stacks }: { stacks: TeckStackItem[] }) => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
       {stacks.map((i) => (
-        <img src={i.img} alt={i.title} />
+        <img key={i.title} src={i.img} alt={i.title} />
       ))}
     </div>
   );
