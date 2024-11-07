@@ -4,7 +4,7 @@ import { format } from "date-fns";
 import Link from "next/link";
 import React from "react";
 import { get } from "lodash";
-import { PageProps } from "@/.next/types/app/page";
+import type { NextPage } from "next";
 
 export const generateStaticParams = async () => {
   const posts: any[] = await getAllBlogPosts();
@@ -16,7 +16,11 @@ export const generateStaticParams = async () => {
 
 export const revalidate = 0;
 
-export default async function page({ params }: PageProps) {
+export default async function page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const data = await getBlogPostBySlug(slug);
   //   const latestPosts = await getAllBlogPosts(3);
