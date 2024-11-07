@@ -4,7 +4,6 @@ import { format } from "date-fns";
 import Link from "next/link";
 import React from "react";
 import { get } from "lodash";
-import type { NextPage } from "next";
 
 export const generateStaticParams = async () => {
   const posts: any[] = await getAllBlogPosts();

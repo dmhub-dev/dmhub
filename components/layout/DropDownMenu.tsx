@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
-import React, { ReactNode, useEffect, useRef } from "react";
+import React, { ReactNode } from "react";
 
 type DropDownMenuProps = {
   title: string;
