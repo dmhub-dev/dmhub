@@ -21,6 +21,6 @@ const config: Config = {
       condensed: ["'Roboto Condensed'", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
 };
 export default config;
