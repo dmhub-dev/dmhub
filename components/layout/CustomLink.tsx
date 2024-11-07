@@ -18,7 +18,7 @@ export default function CustomLink({
     <Link
       href={href}
       className={`uppercase text-base h-[100px] flex items-center px-3 hover:text-primary ${
-        includes(href, pathName) ? "text-primary" : ""
+        includes(href, pathName) && pathName.length > 2 ? "text-primary" : ""
       }`}
     >
       {title}
