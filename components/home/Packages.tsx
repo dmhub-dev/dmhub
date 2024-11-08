@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const developmentHoursFeatures = [
@@ -9,6 +10,14 @@ const developmentHoursFeatures = [
   "Dedicated team",
   "Supports multiple projects",
   "QA & Testing",
+];
+
+const projectFeatures = [
+  "Front-end & backend development",
+  "UI/UX Design",
+  "Dedicated team",
+  "QA & Testing",
+  "Project Management",
 ];
 
 const maintenanceFeatures = [
@@ -38,14 +47,14 @@ export default function Packages() {
             Grow your business with fixed monthly development hours for any
             project that your have.
           </p>
-          <a
-            href="#"
+          <Link
+            href="/book-a-call?product=Developer+Hours"
             title=""
             className="flex items-center justify-center w-full px-4 py-4 mb-5 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border-2 border-transparent rounded-md hover:bg-blue-700 focus:bg-blue-700"
             role="button"
           >
             Book a call
-          </a>
+          </Link>
           <ul>
             {developmentHoursFeatures.map((i) => (
               <li
@@ -64,14 +73,14 @@ export default function Packages() {
             Get upto 80 hours of monthly maintenance work to turn your website
             into an invaluable business asset.
           </p>
-          <a
-            href="#"
+          <Link
+            href="/book-a-call?product=Maintenance"
             title=""
             className="flex items-center justify-center w-full px-4 py-4 mb-5 text-base font-semibold transition-all duration-200 border-2 border-black rounded-md hover:bg-black focus:bg-black hover:text-white"
             role="button"
           >
             Book a call
-          </a>
+          </Link>
           <ul>
             {maintenanceFeatures.map((i) => (
               <li
@@ -92,16 +101,16 @@ export default function Packages() {
             We design and develop tailored web applications, mobile apps and
             websites to meet your specific needs.
           </p>
-          <a
-            href="#"
+          <Link
+            href="/book-a-call?product=Project"
             title=""
             className="flex items-center justify-center w-full px-4 py-4 mb-5 text-base font-semibold transition-all duration-200 border-2 border-black rounded-md hover:bg-black focus:bg-black hover:text-white"
             role="button"
           >
             Book a call
-          </a>
+          </Link>
           <ul>
-            {developmentHoursFeatures.map((i) => (
+            {projectFeatures.map((i) => (
               <li
                 key={i}
                 className="text-base underline-offset-4 mb-4 text-black/80 underline decoration-dashed"
