@@ -1,1 +1,2 @@
-export const WP_ENDPOINT = "http://dmhub.dev/wp-json/wp/v2/";
+export const WP_ENDPOINT =
+  process.env.WP_ENDPOINT || "http://admin.dmhub.dev/wp-json/wp/v2/";
