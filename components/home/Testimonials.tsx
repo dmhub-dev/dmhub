@@ -19,13 +19,13 @@ export default function Testimonials() {
           />
           <TestimonialCard
             name="Robert Fox"
-            jobTitle="Founder at Brain AI Inc"
-            quote="Amet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat"
+            jobTitle="Founder at Reply Cart Inc"
+            quote="Choosing DM Hub to handle our web platform at ReplyCart was one of the best decisions we made. Their technical know-how and dedication to detail have greatly improved our website's performance, helping us deliver a better experience for our clients."
           />
           <TestimonialCard
-            name="Kristin Watson"
-            jobTitle="Senior Developer at Big Inc"
-            quote="Amet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat"
+            name="Jeff Watson"
+            jobTitle="Senior Developer at Gozee Content"
+            quote="We were understaffed on developers for a critical project, and they stepped in seamlessly, bringing both technical expertise and efficiency to the table."
           />
         </div>
       </div>
