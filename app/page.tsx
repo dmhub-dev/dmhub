@@ -1,4 +1,5 @@
 import Hero from "@/components/home/Hero";
+import HomeIndustries from "@/components/home/HomeIndustries";
 import OurExpertise from "@/components/home/OurExpertise";
 import Packages from "@/components/home/Packages";
 import Testimonials from "@/components/home/Testimonials";
@@ -11,6 +12,7 @@ export default function Home() {
       <OurExpertise />
       <Testimonials />
       <Packages />
+      <HomeIndustries />
       <MainCTA />
     </main>
   );

@@ -43,6 +43,30 @@ export default function DropdownLink({
             ))}
           </ul>
         </div>
+        <div className="p-6">
+          <div
+            className="rounded-xl w-full h-full bg-cover"
+            style={{ backgroundImage: "url(/img/dm-hero-bg.jpg)" }}
+          >
+            <div className="w-full h-full bg-black/30 rounded-xl text-white flex items-end">
+              <div className="p-4">
+                <h4 className="font-bold text-base mb-2">Book a call</h4>
+                <p className="mb-4 text-white/80 text-sm">
+                  Find out how we can unlock your business growth with out
+                  bespoke software development services
+                </p>
+                <a
+                  href="#"
+                  title=""
+                  className="flex items-center justify-center w-full px-4 py-4 mt-4 text-base font-semibold text-white transition-all duration-200 bg-transparent border-2 border-white rounded-md hover:bg-black focus:bg-black hover:text-white focus:text-white"
+                  role="button"
+                >
+                  Let&apos;s chat
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
