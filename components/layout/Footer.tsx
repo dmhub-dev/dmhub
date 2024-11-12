@@ -8,7 +8,6 @@ import {
 } from "./constants";
 import { robotoCondensed } from "@/lib/fonts";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-import Logo from "../widgets/Logo";
 import FooterNewsletterForm from "./FooterNewsletterForm";
 
 export default function Footer() {
@@ -19,7 +18,7 @@ export default function Footer() {
       <div className="container grid md:grid-cols-4 gap-6 md:gap-0 mb-16">
         <div>
           <Link href="/" className="text-5xl">
-            <Logo className="h-14 w-auto fill-white" />
+            <img src="/dm-logo.png" className="h-28 w-auto fill-white" />
           </Link>
 
           <div className="mt-8">

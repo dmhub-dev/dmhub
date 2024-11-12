@@ -3,7 +3,7 @@ import React from "react";
 import HeroBg from "./HeroBg";
 
 export default function Hero({
-  title = "The Power of Tailored Software Solutions",
+  title = "Bespoke software development solutions for your business growth",
   secondaryCopy = "Tap global expertise to take unlock business growth with out bespoke software services",
 }: {
   title?: string;
