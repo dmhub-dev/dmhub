@@ -85,7 +85,7 @@ export default function HomeIndustries() {
               icon={i.icon}
               title={i.title}
               link={i.link}
-              description={i.description}
+              description={`${i.title} website development, automations and software solutions`}
             />
           ))}
         </div>

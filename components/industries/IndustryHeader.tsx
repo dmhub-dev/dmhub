@@ -4,10 +4,12 @@ export default function IndustryHeader({
   img,
   title,
   icon = "/icons/cloud.png",
+  description,
 }: {
   img?: string;
   title: string;
   icon: string;
+  description: string;
 }) {
   return (
     <section className="w-full bg-gray-100">
@@ -26,7 +28,9 @@ export default function IndustryHeader({
         </div>
         <h1 className="font-bold text-3xl mb-4 capitalize">{title}</h1>
       </div>
-      <div className="container w-full bg-gray-100 py-16"></div>
+      <div className="container w-full bg-gray-100 pt-10 pb-16">
+        <article className="text-base max-w-4xl">{description}</article>
+      </div>
     </section>
   );
 }
