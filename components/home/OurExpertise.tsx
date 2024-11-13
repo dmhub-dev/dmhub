@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import { backendStacks, frontendStacks, TeckStackItem } from "./constants";
+import {
+  backendStacks,
+  cloudStacks,
+  cmsStacks,
+  commerceStacks,
+  frontendStacks,
+  TeckStackItem,
+} from "./constants";
 
 const options = ["Frontend", "Backend", "CMS", "E-Commerce", "Cloud"];
 
@@ -30,6 +37,11 @@ export default function OurExpertise() {
       <div className="mb-12 max-w-5xl mx-auto container">
         {activeTab === "Frontend" && <TechStackList stacks={frontendStacks} />}
         {activeTab === "Backend" && <TechStackList stacks={backendStacks} />}
+        {activeTab === "CMS" && <TechStackList stacks={cmsStacks} />}
+        {activeTab === "E-Commerce" && (
+          <TechStackList stacks={commerceStacks} />
+        )}
+        {activeTab === "Cloud" && <TechStackList stacks={cloudStacks} />}
       </div>
     </section>
   );
