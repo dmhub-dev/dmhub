@@ -5,6 +5,10 @@ export const servicesLinks = [
     link: "/services/remote-development-team",
   },
   { title: "Wordpress Development", link: "/services/wordpress-development" },
+  {
+    title: "E-commerce Website Development",
+    link: "/services/e-commerce-website-development",
+  },
   { title: "Mobile App Development", link: "/services/mobile-app-development" },
   { title: "iOS App Development", link: "/services/ios-app-development" },
   {
