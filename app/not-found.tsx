@@ -1,4 +1,3 @@
-import Header from "@/components/layout/Header";
 import { VideoIcon } from "@/components/widgets/VideoIcon";
 import React from "react";
 

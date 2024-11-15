@@ -1,3 +1,5 @@
+import HomeIndustries from "@/components/home/HomeIndustries";
+import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import ServiceHero from "@/components/services/ServiceHero";
 import MainCTA from "@/components/widgets/MainCTA";
 import { getAllServices, getServiceBySlug } from "@/lib/wordpress/services";
@@ -21,12 +23,20 @@ export default async function ServicesPage({
 
   return (
     <>
-      <hr />
-      <ServiceHero
+      <Breadcrumbs
         title={data.title}
-        img={data.hero_image}
-        description={data.about_service}
+        breadcrumbs={[{ title: "Services", link: "/services" }]}
       />
+      <ServiceHero title={data.title} img={data.hero_image} />
+      <section className="w-full bg-gray-100 py-24">
+        <div className="container text-center max-w-4xl">
+          <article
+            className="mb-4 text-gray-600 text-lg leading-[1.6]"
+            dangerouslySetInnerHTML={{ __html: data.about_service || "" }}
+          />
+        </div>
+      </section>
+      <HomeIndustries />
       <MainCTA />
     </>
   );

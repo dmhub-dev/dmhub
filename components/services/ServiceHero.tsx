@@ -1,15 +1,11 @@
-import { robotoCondensed } from "@/lib/fonts";
-import Link from "next/link";
 import React from "react";
 
 export default function ServiceHero({
   img,
   title,
-  description,
 }: {
   img: string;
   title: string;
-  description?: string;
 }) {
   return (
     <section className="w-full relative">
@@ -17,29 +13,21 @@ export default function ServiceHero({
         <img
           src={img}
           alt=""
-          className="w-full h-[calc(100vh-100px)] object-cover"
+          className="w-full h-[calc(100vh-160px)] object-cover"
         />
       </div>
 
       <div className="absolute inset-0 flex items-center">
         <div className="container w-full">
           <div className="md:w-1/2 md:pr-8">
-            <div
-              className={`flex items-center text-center gap-3 text-gray-600 mb-6 uppercase text-sm ${robotoCondensed.className}`}
-            >
-              <Link className="hover:text-primary" href="/">
-                Home
-              </Link>
-              <span>/</span>
-              <Link className="hover:text-primary" href="/services">
-                Services
-              </Link>
-            </div>
             <h1 className="text-3xl md:text-4xl font-bold mb-4">{title}</h1>
-            <article
-              className="mb-4 text-gray-600 text-base"
-              dangerouslySetInnerHTML={{ __html: description || "" }}
-            ></article>
+            <article className="mb-4 text-gray-600 text-base">
+              Unlock the potential of your ideas with our {title} services,
+              where innovation meets functionality. From concept to launch, we
+              craft custom solutions tailored to your needs, ensuring seamless
+              performance, user-friendly interfaces, and cutting-edge technology
+              to help your business thrive.
+            </article>
             <div className="flex">
               <a
                 href="#"

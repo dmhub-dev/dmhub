@@ -1,4 +1,5 @@
 import BlogList from "@/components/blog/BlogList";
+import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import HeaderSection from "@/components/widgets/HeaderSection";
 import MainCTA from "@/components/widgets/MainCTA";
 import { getAllBlogPosts } from "@/lib/wordpress/blog";
@@ -9,6 +10,7 @@ export default async function BlogListPage() {
 
   return (
     <>
+      <Breadcrumbs title="Insights" breadcrumbs={[]} />
       <HeaderSection
         title="Blog"
         subTitle="All the best tech musings and articles"

@@ -17,10 +17,10 @@ export default function IndustryHeader({
         <img
           src={img}
           alt={title}
-          className="w-full block object-cover h-[280px] bg-blue-800"
+          className="w-full block object-cover h-[240px] bg-blue-800"
         />
       ) : (
-        <div className="h-[280px] bg-blue-800"></div>
+        <div className="h-[240px] bg-blue-800"></div>
       )}
       <div className="container w-full -mt-20 md:flex items-end gap-10  flex-wrap">
         <div className="size-40 rounded-md flex items-center justify-center bg-slate-800">
