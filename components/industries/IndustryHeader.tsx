@@ -26,7 +26,10 @@ export default function IndustryHeader({
         <div className="size-40 rounded-md flex items-center justify-center bg-slate-800">
           <img src={icon} alt="" className="h-20 w-auto invert" />
         </div>
-        <h1 className="font-bold text-3xl mb-4 capitalize">{title}</h1>
+        <h1
+          className="font-bold text-3xl mb-4 capitalize"
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
       </div>
       <div className="container w-full bg-gray-100 pt-10 pb-16">
         <article className="text-base max-w-4xl">{description}</article>

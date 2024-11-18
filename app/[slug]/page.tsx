@@ -37,26 +37,26 @@ export default async function WPPages({
   const data: PageData | null = await getPageBySlug(slug);
 
   if (!data) {
-    return <PageNotFound/>
+    return <PageNotFound />;
   }
 
   const title = data.title?.rendered || "Untitled Page";
   const content = data.content?.rendered || "<p>No content available.</p>";
-  const date = data.date ? format(new Date(data.date), "MMMM dd, yyyy") : "Unknown date";
+  const date = data.date
+    ? format(new Date(data.date), "MMMM dd, yyyy")
+    : "Unknown date";
   const featuredImage = get(data, "_embedded.wp:featuredmedia[0]", null);
 
   return (
     <>
-      <hr />
+      <Breadcrumbs
+        title={title}
+        breadcrumbs={[{ title: "Insights", link: "/blog" }]}
+      />
       <div className="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="max-w-4xl mx-auto">
           <div className="py-8 lg:pe-8">
             <div className="space-y-5 lg:space-y-8">
-            <Breadcrumbs
-                title={title}
-                breadcrumbs={[{ title: "Insights", link: "/blog" }]}
-             />
-
               <h2
                 className="text-3xl font-bold lg:text-5xl"
                 dangerouslySetInnerHTML={{ __html: title }}
@@ -72,11 +72,14 @@ export default async function WPPages({
                     className="w-full object-cover rounded-xl"
                     src={featuredImage.link}
                     alt={
-                      featuredImage?.caption?.rendered || featuredImage?.title?.rendered || "Featured Image"
+                      featuredImage?.caption?.rendered ||
+                      featuredImage?.title?.rendered ||
+                      "Featured Image"
                     }
                   />
                   <figcaption className="mt-3 text-sm text-center text-gray-500">
-                    {featuredImage?.caption?.rendered || featuredImage?.title?.rendered}
+                    {featuredImage?.caption?.rendered ||
+                      featuredImage?.title?.rendered}
                   </figcaption>
                 </figure>
               )}

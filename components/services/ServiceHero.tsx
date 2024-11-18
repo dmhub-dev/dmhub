@@ -20,7 +20,10 @@ export default function ServiceHero({
       <div className="absolute inset-0 flex items-center">
         <div className="container w-full">
           <div className="md:w-1/2 md:pr-8">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">{title}</h1>
+            <h1
+              className="text-3xl md:text-4xl font-bold mb-4"
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
             <article className="mb-4 text-gray-600 text-base">
               Unlock the potential of your ideas with our {title} services,
               where innovation meets functionality. From concept to launch, we

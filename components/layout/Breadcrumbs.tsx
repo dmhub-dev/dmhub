@@ -36,9 +36,10 @@ const Breadcrumbs = ({
             <ChevronRight className="mx-2 text-black/60 h-4" />
           </React.Fragment>
         ))}
-        <span className="text-black/80 uppercase text-sm overflow-hidden whitespace-nowrap text-ellipsis">
-          {truncate(title, { length: 30 })}
-        </span>
+        <span
+          className="text-black/80 uppercase text-sm overflow-hidden whitespace-nowrap text-ellipsis"
+          dangerouslySetInnerHTML={{ __html: truncate(title, { length: 30 }) }}
+        />
       </div>
     </section>
   );
