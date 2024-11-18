@@ -11,7 +11,7 @@ export default function Page() {
     details: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -19,7 +19,7 @@ export default function Page() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     // You can send the formData to your backend API here
     console.log('Form Data:', formData);
