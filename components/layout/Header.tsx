@@ -1,9 +1,12 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import DropdownLink from "../widgets/DropdownLink";
 import { companyLinks, industryLinks, servicesLinks } from "./constants";
 import { ChevronDown } from "lucide-react";
 import CustomLink from "./CustomLink";
+import MenuIcon from "../widgets/MenuIcon";
 
 export type LinkItem = {
   title: string;
@@ -11,12 +14,20 @@ export type LinkItem = {
 };
 
 export default function Header() {
+  const [menuActive, setMenuActive] = useState(false);
+
   return (
     <header className="w-full bg-white h-[100px] flex items-center">
       <div className="container w-full flex justify-between items-center">
         <Link href="/" className="text-2xl uppercase">
           <img src="/dm-logo.png" className="h-32 w-auto text-primary" />
         </Link>
+        <button
+          onClick={() => setMenuActive(!menuActive)}
+          className="block md:hidden"
+        >
+          <MenuIcon active={menuActive} />
+        </button>
         <div className="hidden md:flex items-center gap-2">
           <DropdownLink
             title="Services"
