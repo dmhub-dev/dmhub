@@ -1,7 +1,7 @@
 import BlogList from "@/components/blog/BlogList";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
-import HeaderSection from "@/components/widgets/HeaderSection";
 import MainCTA from "@/components/widgets/MainCTA";
+import PageHero from "@/components/widgets/PageHero";
 import { getAllBlogPosts } from "@/lib/wordpress/blog";
 import React from "react";
 
@@ -11,9 +11,9 @@ export default async function BlogListPage() {
   return (
     <>
       <Breadcrumbs title="Insights" breadcrumbs={[]} />
-      <HeaderSection
+      <PageHero
         title="Blog"
-        subTitle="All the best tech musings and articles"
+        description="All the best tech musings and articles"
         img="/img/header-bg.jpg"
       />
       <BlogList posts={allBlogs} showReadMore />
