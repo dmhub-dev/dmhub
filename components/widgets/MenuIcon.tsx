@@ -1,7 +1,7 @@
 import React from "react";
 
 const MenuIcon = ({ active, ...rest }: { active: boolean }) => {
-  let styles = active ? "hamburger hamburger--active" : "hamburger";
+  const styles = active ? "hamburger hamburger--active" : "hamburger";
 
   return (
     <>
