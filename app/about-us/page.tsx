@@ -62,7 +62,7 @@ export default function AboutUsPage() {
     </div>
 
     <div>
-      <FeaturesSection features={skillsData} />
+      {/* <FeaturesSection features={skillsData} /> */}
     </div>
     </div>
   </div>
