@@ -13,6 +13,7 @@ export const generateStaticParams = async () => {
   }));
 };
 
+
 export default async function ServicesPage({
   params,
 }: {
@@ -20,6 +21,7 @@ export default async function ServicesPage({
 }) {
   const { slug } = await params;
   const data = await getServiceBySlug(slug);
+  console.log(data,"slug")
 
   return (
     <>

@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="container grid md:grid-cols-4 gap-6 md:gap-0 mb-16">
         <div>
           <Link href="/" className="text-5xl">
-            <img src="/dm-logo.png" className="h-28 w-auto fill-white" />
+            <img src="/dm-logo.png" className="h-28 w-auto fill-white"  alt="dmlogo"/>
           </Link>
 
           <div className="mt-8">

@@ -1,7 +1,7 @@
 import { robotoCondensed } from "@/lib/fonts";
 import React from "react";
 import HeroBg from "./HeroBg";
-
+import Modal from "../layout/Modal";
 export default function Hero({
   title = "Bespoke software development solutions for your business growth",
   secondaryCopy = "Tap global expertise to unlock business growth with our bespoke software development services",
@@ -19,11 +19,7 @@ export default function Hero({
             {title}
           </h1>
           <p className="mb-6 text-white max-w-[400px]">{secondaryCopy}</p>
-          <button
-            className={`inline-block font-condensed rounded px-6 py-4 bg-primary text-white uppercase text-xl ${robotoCondensed.className}`}
-          >
-            Start a Project
-          </button>
+          <Modal/>
         </div>
       </div>
     </section>
