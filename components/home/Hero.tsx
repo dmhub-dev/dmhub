@@ -4,7 +4,7 @@ import HeroBg from "./HeroBg";
 
 export default function Hero({
   title = "Bespoke software development solutions for your business growth",
-  secondaryCopy = "Tap global expertise to take unlock business growth with out bespoke software development services",
+  secondaryCopy = "Tap global expertise to unlock business growth with our bespoke software development services",
 }: {
   title?: string;
   secondaryCopy?: string;
