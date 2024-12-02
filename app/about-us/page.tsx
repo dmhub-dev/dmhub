@@ -4,7 +4,7 @@ import PageHero from "@/components/widgets/PageHero";
 import React from "react";
 import Modal from "@/components/layout/Modal";
 import {skillsData, featuresData, principles , steps} from '@/components/layout/constants'
-
+import FeaturesSection from "@/components/layout/FeaturesSection";
 export default function AboutUsPage() {
   return (
     <>
@@ -24,7 +24,7 @@ export default function AboutUsPage() {
         <p className="mt-6 text-base md:text-lg text-gray-700 max-w-2xl">
           <strong>DM HUB</strong> was set up to not only provide high-end websites but to deliver a service of the highest standards. 
           We know how critical your investment is to the success of your business. We make it our core principle to deliver 
-          the service you'd expect from a professional web design and development company.
+          the service you&apos;d expect from a professional web design and development company.
         </p>
 
         <div className="flex space-x-6 mt-8 text-gray-800">
@@ -47,7 +47,7 @@ export default function AboutUsPage() {
         <p className="text-gray-600 text-lg">
           We specialise in a variety of key skills. Combining these specialities
           we provide a complete digital service. We bring next-generation
-          technology to develop innovative solutions to today's challenges.
+          technology to develop innovative solutions to today&apos;s challenges.
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export default function AboutUsPage() {
             Our core principles
             </h2>
             <p className="text-gray-600 text-lg text-center ">
-            DUDOS Online Ltd was created so we could choose to work with the technology, design and marketing principles we believe in. DUDOS Online is more than just a business. It's a web design company that let us provide a digital service we are passionate about.
+            DUDOS Online Ltd was created so we could choose to work with the technology, design and marketing principles we believe in. DUDOS Online is more than just a business. It&apos;s a web design company that let us provide a digital service we are passionate about.
             </p>
           </div>
           <FeaturesSection features={principles}/>
@@ -134,36 +134,6 @@ export default function AboutUsPage() {
 
 
 
-type Feature = {
-  icon?: string; 
-  title: string; 
-  description: string; 
-};
-
-type FeaturesSectionProps = {
-  features: Feature[];
-};
-
-export const FeaturesSection: React.FC<FeaturesSectionProps> = ({ features }) => {
-  return (
-    <div className=" py-12 px-6">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="bg-white  p-6 flex flex-col items-left"
-          >
-            {feature.icon && (
-              <div className="text-4xl mb-4 text-black">{feature.icon}</div>
-            )}
-            <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-            <p className="text-gray-600">{feature.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 
 

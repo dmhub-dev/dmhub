@@ -3,7 +3,8 @@ import MainCTA from "@/components/widgets/MainCTA";
 import { getAllIndustries } from "@/lib/wordpress/industries";
 import React, { useState, useEffect } from "react";
 
-export default function IndustriesListPage({ title = "Our Industries" }) {
+export default function IndustriesListPage() {
+  const title = "Our Industries";
   const [industries, setIndustries] = useState<any[]>([]);
   const [activeTab, setActiveTab] = useState<number | null>(null);
 
@@ -14,20 +15,20 @@ export default function IndustriesListPage({ title = "Our Industries" }) {
         console.log(fetchedIndustries);
 
         const sanitizedIndustries = fetchedIndustries.map((industry: any) => ({
-          id: industry?.id || Math.random(), 
-          title: industry?.title || "Untitled Industry", 
-          description: industry?.summary || null, 
-          featuredImage: industry?.featuredImage || null, 
+          id: industry?.id || Math.random(),
+          title: industry?.title || "Untitled Industry",
+          description: industry?.summary || null,
+          featuredImage: industry?.featuredImage || null,
         }));
 
         setIndustries(sanitizedIndustries);
 
         if (sanitizedIndustries.length > 0) {
-          setActiveTab(sanitizedIndustries[0].id); 
+          setActiveTab(sanitizedIndustries[0].id);
         }
       } catch (error) {
         console.error("Failed to fetch industries:", error);
-        setIndustries([]); 
+        setIndustries([]);
       }
     }
 
@@ -37,14 +38,14 @@ export default function IndustriesListPage({ title = "Our Industries" }) {
   return (
     <div className=" w-full pt-16  ">
       <div className="flex flex-col items-center justify-center text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center md:text-left">
-            {title}
-          </h1>
-          <p className="text-gray-600 max-w-2xl mb-8 text-center md:text-left mx-auto md:mx-0">
-            We specialize in providing tailored solutions across a wide range of
-            industries, helping businesses thrive with innovative strategies and
-            expert execution.
-          </p>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center md:text-left">
+          {title}
+        </h1>
+        <p className="text-gray-600 max-w-2xl mb-8 text-center md:text-left mx-auto md:mx-0">
+          We specialize in providing tailored solutions across a wide range of
+          industries, helping businesses thrive with innovative strategies and
+          expert execution.
+        </p>
       </div>
 
       <div className="flex flex-col md:flex-row">
@@ -76,7 +77,7 @@ export default function IndustriesListPage({ title = "Our Industries" }) {
               activeTab === industry.id ? (
                 <div key={industry.id}>
                   <h3 className="text-2xl font-bold mb-4">
-                    {industry.title || title} 
+                    {industry.title || title}
                   </h3>
 
                   {industry.featuredImage ? (
@@ -86,7 +87,7 @@ export default function IndustriesListPage({ title = "Our Industries" }) {
                       className="w-full block object-cover h-[240px] bg-blue-800 mb-4"
                     />
                   ) : (
-                    <div className="h-[240px]  mb-4"></div> 
+                    <div className="h-[240px]  mb-4"></div>
                   )}
 
                   {industry.summary ? (

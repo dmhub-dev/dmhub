@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-before-interactive-script-outside-document */
 "use client";
 
 import { useEffect, useRef } from "react";

@@ -52,7 +52,7 @@ export default function Header() {
     >
       <div className="container w-full flex justify-between items-center">
         <Link href="/" className="text-2xl uppercase">
-          <img src="/dm-logo.png" className="h-32 w-auto text-primary" />
+          <img src="/dm-logo.png" className="h-32 w-auto text-primary"  alt="dmlogo"/>
         </Link>
         <button
           onClick={() => setMenuActive(!menuActive)}

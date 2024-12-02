@@ -1,12 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Form from "@/components/widgets/Form";
 
-function Page() {
+function PageContent() {
   const searchParams = useSearchParams();
-  const queryType = searchParams.get("query") || "start-project"; 
+  const queryType = searchParams.get("query") || "start-project";
 
   const handleProjectSubmit = (formData: { [key: string]: any }) => {
     console.log("Form Data Submitted:", formData);
@@ -38,16 +38,22 @@ function Page() {
   };
 
   return (
-    <div className="min-h-screen  flex items-center justify-center px-4 mx-auto ">
-        <div className="container w-1/2 p-6 ">
-            <Form
-                inputs={getFormInputs()}
-                submitButtonText="Submit Inquiry"
-                onSubmit={handleProjectSubmit}
-            />
-        </div>
+    <div className="min-h-screen flex items-center justify-center px-4 mx-auto">
+      <div className="container w-1/2 p-6">
+        <Form
+          inputs={getFormInputs()}
+          submitButtonText="Submit Inquiry"
+          onSubmit={handleProjectSubmit}
+        />
+      </div>
     </div>
   );
 }
 
-export default Page;
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageContent />
+    </Suspense>
+  );
+}

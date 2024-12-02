@@ -43,7 +43,7 @@ export default function Page() {
                 <div className="flex gap-x-7 py-6">
                   <svg className="shrink-0 size-6 mt-1.5 text-dark " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
                   <div className="grow">
-                    <h3 className="font-semibold text-black ">Netherland's Office</h3>
+                    <h3 className="font-semibold text-black ">Netherland&apos;s Office</h3>
                     <p className="mt-1 text-sm text-black"></p>
                     <a className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-black hover:text-gray-800 focus:outline-none focus:text-gray-800 " href="#">
                       Contact support
@@ -56,7 +56,7 @@ export default function Page() {
                 <div className=" flex gap-x-7 py-6">
                   <svg className="shrink-0 size-6 mt-1.5 text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 11 2-2-2-2"/><path d="M11 13h4"/><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/></svg>
                   <div className="grow">
-                    <h3 className="font-semibold text-black">Nairobi's Office</h3>
+                    <h3 className="font-semibold text-black">Nairobi&apos;s Office</h3>
                     <p className="mt-1 text-sm text-black">Piedmont Plaza, Ngong Road , Nairobi.</p>
                     <a className="mt-2 inline-flex items-center gap-x-2 text-sm font-medium text-black hover:text-gray-800 focus:outline-none focus:text-black" href="#">
                       Contact Us

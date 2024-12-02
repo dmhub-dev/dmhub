@@ -1,35 +1,3 @@
-// import { getAllServices } from "@/lib/wordpress/services";
-// import { getMediaByID } from "@/lib/wordpress/media";
-
-// interface Service {
-//   title: string;
-//   slug: string;
-//   hero_image: string; 
-//   description: string;
-// }
-
-// const services: Service[] = await getAllServices();
-// console.log(services)
-// export const servicesLinks = await Promise.all(
-//   services.map(async (service) => {
-//     console.log(service.hero_image)
-//     const imageUrl = await getMediaByID(service.hero_image);
-//     console.log(imageUrl)
-
-//     return {
-//       title: service.title,
-//       link: `/services/${service.slug}`,
-//       image: imageUrl || "/img/default-image.jpg", 
-//       description: service.description || "No description available.",
-//     };
-//   })
-// );
-
-// console.log(servicesLinks); 
-
-
-
-
 export const servicesLinks = [
   {
     title: "Website Development",
