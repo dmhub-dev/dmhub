@@ -1,5 +1,3 @@
 # DM Hub Home Page
 
-v 0.2.3
-
-//
+v 0.2.5
