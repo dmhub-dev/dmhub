@@ -38,3 +38,70 @@ export const cloudStacks: TeckStackItem[] = [
   { title: "AWS", img: "/stacks/aws.svg" },
   { title: "Google Cloud", img: "/stacks/gcp.svg" },
 ];
+
+
+export const industries = [
+  {
+    title: "E-commerce",
+    link: "/industries/e-commerce-website-development",
+    icon: "/icons/shopping-cart.png",
+    description:
+      "E-commerce website development, automations and software solutions",
+  },
+  {
+    title: "Finance",
+    link: "/industries/fintech-app-development",
+    icon: "/icons/bars.png",
+    description:
+      "E-commerce website development, automations and software solutions",
+  },
+  {
+    title: "Tech",
+    link: "/industries/tech-website-development",
+    icon: "/icons/cloud.png",
+    description:
+      "E-commerce website development, automations and software solutions",
+  },
+  {
+    title: "SaaS",
+    link: "/industries/saas-app-development",
+    icon: "/icons/software.png",
+    description:
+      "E-commerce website development, automations and software solutions",
+  },
+  {
+    title: "Government",
+    link: "/industries/government-agency-website-development",
+    icon: "/icons/government.png",
+    description:
+      "E-commerce website development, automations and software solutions",
+  },
+  {
+    title: "Construction",
+    link: "/industries/construction-website-development",
+    icon: "/icons/building.png",
+    description:
+      "E-commerce website development, automations and software solutions",
+  },
+  {
+    title: "Healthcare",
+    link: "/industries/healthcare-website-development",
+    icon: "/icons/heart.png",
+    description:
+      "E-commerce website development, automations and software solutions",
+  },
+  {
+    title: "Hospitality",
+    link: "/industries/hotel-website-development",
+    icon: "/icons/resort.png",
+    description:
+      "E-commerce website development, automations and software solutions",
+  },
+  {
+    title: "Automotive",
+    link: "/industries/transport-and-automotive",
+    icon: "/icons/transportation.png",
+    description:
+      "E-commerce website development, automations and software solutions",
+  },
+];
