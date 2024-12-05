@@ -16,13 +16,21 @@ export default function OurExpertise() {
   const [activeTab, setActiveTab] = useState("Frontend");
   return (
     <section className="w-full py-16">
-      <h2 className="text-4xl font-bold text-center mb-12">Our Expertise</h2>
+      <h2
+        className="text-4xl font-bold text-center mb-12"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        Our Expertise
+      </h2>
 
       <div className="container max-w-5xl mx-auto flex flex-wrap justify-between mb-12">
-        {options.map((i) => (
+        {options.map((i, index) => (
           <button
             onClick={() => setActiveTab(i)}
             key={i}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
             className={`p-2 px-6 mt-4 font-semibold md:text-xl border-b-2  ${
               activeTab === i
                 ? "text-primary border-primary"
@@ -50,8 +58,15 @@ export default function OurExpertise() {
 const TechStackList = ({ stacks }: { stacks: TeckStackItem[] }) => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-      {stacks.map((i) => (
-        <img key={i.title} src={i.img} alt={i.title} />
+      {stacks.map((i, index) => (
+        <img
+          data-aos="fade-up"
+          data-aos-delay={index * 100}
+          data-aos-duration="500"
+          key={i.title}
+          src={i.img}
+          alt={i.title}
+        />
       ))}
     </div>
   );

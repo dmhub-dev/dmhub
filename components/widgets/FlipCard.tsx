@@ -7,14 +7,21 @@ export default function FlipCard({
   icon,
   description,
   link,
+  position,
 }: {
   title: string;
   icon: string;
   description: string;
   link: string;
+  position: number;
 }) {
   return (
-    <div className="group h-64 w-full [perspective:1000px]">
+    <div
+      data-aos="fade-up"
+      data-aos-delay={position * 100}
+      data-aos-duration="500"
+      className="group h-64 w-full [perspective:1000px]"
+    >
       <div className="relative h-full w-full rounded-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         {/* Front Face */}
         <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden] border p-4 text-center flex justify-center items-center">

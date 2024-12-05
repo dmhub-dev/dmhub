@@ -15,11 +15,23 @@ export default function Hero({
       <HeroBg />
       <div className="absolute inset-0 bg-blue-500/20 flex items-center">
         <div className="container w-full">
-          <h1 className="font-bold font-sans md:leading-[1.2] mb-6 max-w-3xl text-4xl md:text-6xl text-white">
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+            className="font-bold font-sans md:leading-[1.2] mb-6 max-w-3xl text-4xl md:text-6xl text-white"
+          >
             {title}
           </h1>
-          <p className="mb-6 text-white max-w-[400px]">{secondaryCopy}</p>
-          <Modal/>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+            className="mb-6 text-white max-w-[400px]"
+          >
+            {secondaryCopy}
+          </p>
+          <Modal />
         </div>
       </div>
     </section>

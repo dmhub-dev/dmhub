@@ -34,12 +34,21 @@ const maintenanceFeatures = [
 export default function Packages() {
   return (
     <section className="w-full bg-gray-100 py-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+      <h2
+        data-aos="fade-up"
+        data-aos-duration="500"
+        className="text-3xl md:text-4xl font-bold mb-12 text-center"
+      >
         Work with us
       </h2>
 
       <div className="container w-full grid md:grid-cols-3 gap-10">
-        <div className="bg-white p-8 rounded-md">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-duration="500"
+          className="bg-white p-8 rounded-md"
+        >
           <VideoIcon src="/videos/developer-hours.mp4" />
           <h3 className="font-bold text-3xl mb-5 max-w-[200px]">
             Developer hours
@@ -67,7 +76,12 @@ export default function Packages() {
             ))}
           </ul>
         </div>
-        <div className="bg-white p-8 rounded-md">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="500"
+          className="bg-white p-8 rounded-md"
+        >
           <VideoIcon src="/videos/maintenance.mp4" />
           <h3 className="font-bold text-3xl mb-5">Website Maintenance</h3>
           <p className="mb-5 text-gray-600">
@@ -93,7 +107,12 @@ export default function Packages() {
             ))}
           </ul>
         </div>
-        <div className="bg-white p-8 rounded-md">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="500"
+          className="bg-white p-8 rounded-md"
+        >
           <VideoIcon src="/videos/project.mp4" />
           <h3 className="font-bold text-3xl mb-5 max-w-[200px]">
             Start a Project

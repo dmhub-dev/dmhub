@@ -5,7 +5,12 @@ export default function Testimonials() {
     <section className="py-10 bg-white sm:py-16">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-5xl lg:leading-[1.2]">
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="500"
+            className="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-5xl lg:leading-[1.2]"
+          >
             Trusted by <span className="text-blue-600">30+</span> world class
             companies, founders & development teams
           </h2>
@@ -53,7 +58,12 @@ const TestimonialCard = ({
   name: string;
   jobTitle: string;
 }) => (
-  <div className="overflow-hidden bg-white rounded-md shadow hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
+  <div
+    data-aos="fade-up"
+    data-aos-delay="200"
+    data-aos-duration="500"
+    className="overflow-hidden bg-white rounded-md shadow hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
+  >
     <div className="px-6 py-12">
       <QuoteIcon />
       <blockquote className="mt-7">
