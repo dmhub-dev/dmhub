@@ -52,7 +52,7 @@ export default function MainCTA({
                 everything runs smoothly and efficiently.
               </p>
             </blockquote>
-            <p className="mt-6 text-base font-semibold text-white">Dajo R.</p>
+            <p className="mt-6 text-base font-semibold text-white">Dajo Rodrigo</p>
             <p className="mt-1 text-base text-gray-300">BrandNewDay</p>
           </div>
 
