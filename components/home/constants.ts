@@ -19,6 +19,8 @@ export const backendStacks: TeckStackItem[] = [
   { title: "Laravel", img: "/stacks/laravel.svg" },
   { title: "ExpressJS", img: "/stacks/express.svg" },
   { title: "Codeigniter", img: "/stacks/codeigniter.svg" },
+  { title: "GraphQl", img: "/stacks/graphql.png" },
+  { title: "Restful API", img: "/stacks/restfulapi.png" },
 ];
 
 export const cmsStacks: TeckStackItem[] = [
@@ -37,6 +39,7 @@ export const commerceStacks: TeckStackItem[] = [
 export const cloudStacks: TeckStackItem[] = [
   { title: "AWS", img: "/stacks/aws.svg" },
   { title: "Google Cloud", img: "/stacks/gcp.svg" },
+  { title: "Vercel", img: "/stacks/vercels.png" },
 ];
 
 

@@ -2,11 +2,18 @@
 
 import React from 'react';
 import Form from '@/components/widgets/Form';
+import Breadcrumbs from '@/components/layout/Breadcrumbs';
+
 export default function Page() {
   const handleContactSubmit = (formData: { [key: string]: any }) => {
     console.log("Contact Form Data:", formData);
     alert("Your inquiry has been submitted successfully!");
   };
+
+  const breadcrumbs = [
+    { title: "Home", link: "/" },
+    { title: "Contact", link: "/contact" },
+  ];
 
   const contactInputs = [
     { name: "firstName", type: "text", label: "First Name", placeholder: "First Name", required: true },
@@ -24,12 +31,14 @@ export default function Page() {
     <>
       <div>
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-          <div className="max-w-2xl lg:max-w-5xl mx-auto">
+          <div className="max-w-2xl lg:max-w-5xl mx-auto">  
+
+          <Breadcrumbs breadcrumbs={breadcrumbs} title={''} />         
+
             <div className="text-center">
               <h1 className="text-3xl font-bold text-black sm:text-4xl">Contact us</h1>
               <p className="mt-1 text-black">We would love to talk about how we can help you.</p>
             </div>
-
             <div className="mt-12 grid items-center lg:grid-cols-2 gap-6 lg:gap-16">
               <div className="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-8">
                 <Form
