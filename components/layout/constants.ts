@@ -173,7 +173,7 @@ export const footerLinks = [
 
 export const vacanciesLinks = [
   {
-    title: "Open Positions",
+    title: "We Are Hiring",
     link: "/vacancies",
   },
   {

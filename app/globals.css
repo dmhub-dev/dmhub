@@ -11,3 +11,14 @@
     #f6f6f6 100%
   );
 }
+
+.required::after {
+  content:"*";
+  color: red;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
